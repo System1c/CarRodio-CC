@@ -15,15 +15,7 @@ if (isset($_POST['submit']))
     if($count == 1){
                 $status1 = "true";
                 $_COOKIE[$status1]=$logins;
-                $q1 = mysqli_query("SELECT firstname FROM users WHERE email = '$emal'");
-                $fquery = mysqli::_fetch_array($q1);
-                echo $fquery['fname'];
-                $q2 = mysqli_query("SELECT lastname FROM users WHERE email = '$emal'");
-                $lname = mysqli_fetch_array($q2);
-
-                setcookie("finame", $fname, "/" );
-
-/*        header("Location: ../../dash/index.php");*/
+/*              header("Location: ../../dash/index.php");*/
         }
             else{
                 $status1 = "false";

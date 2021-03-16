@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$_SESSION['err']= " ";
+$_COOKIE['err']= " ";
 ?>
 <html lang="en">
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 include ('assets/php/login.php');
-print $_SESSION['err'];
+print $_COOKIE['err'];
 
 ?>
 
