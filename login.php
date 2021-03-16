@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
 include ('assets/php/login.php');
-echo $_SESSION['err'];
+print $_SESSION['err'];
+
 ?>
 
 <html lang="en" >

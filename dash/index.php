@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+$user="";
+$user = $_COOKIE['finame'];
+$_SESSION['err']="";
+
+?>
 <html lang="en">
 
 <head>
@@ -141,7 +147,7 @@
                                         <div class="media">
                                             <img class="d-flex align-self-center img-radius" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
                                             <div class="media-body">
-                                                <h5 class="notification-user">Your Mum</h5>
+                                                <h5 class="notification-user"></h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
                                                 <span class="notification-time">30 minutes ago</span>
                                             </div>
@@ -217,7 +223,7 @@
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="assets/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">Your Mum<i class="fa fa-caret-down"></i></span>
+                                        <span id="more-details"><?php print  $user;?><i class="fa fa-caret-down"></i></span>
                                     </div>
                                 </div>
                                 <div class="main-menu-content">
@@ -242,7 +248,7 @@
                             <div class="pcoded-navigation-label">Navigation</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="active">
-                                    <a href="index.html" class="waves-effect waves-dark">
+                                    <a href="index.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext">Dashboard</span>
                                         <span class="pcoded-mcaret"></span>
@@ -334,66 +340,6 @@
                                     </a>
                                 </li>
                             </ul>
-                            <div class="pcoded-navigation-label">Tables</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a href="bs-basic-table.html" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-receipt"></i><b>B</b></span>
-                                        <span class="pcoded-mtext">Table</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="pcoded-navigation-label">Chart And Maps</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a href="chart-morris.html" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i><b>C</b></span>
-                                        <span class="pcoded-mtext">Charts</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="map-google.html" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-map-alt"></i><b>M</b></span>
-                                        <span class="pcoded-mtext">Maps</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="pcoded-navigation-label">Pages</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="pcoded-hasmenu ">
-                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-id-badge"></i><b>A</b></span>
-                                        <span class="pcoded-mtext">Pages</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                    <ul class="pcoded-submenu">
-                                        <li class="">
-                                            <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
-                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">Login</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="auth-sign-up.html" class="waves-effect waves-dark">
-                                                <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">Registration</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="sample-page.html" class="waves-effect waves-dark">
-                                                <span class="pcoded-micon"><i class="ti-layout-sidebar-left"></i><b>S</b></span>
-                                                <span class="pcoded-mtext">Sample Page</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </div>
                     </nav>
                     <div class="pcoded-content">
@@ -410,7 +356,7 @@
                                     <div class="col-md-4">
                                         <ul class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                <a href="index.php"> <i class="fa fa-home"></i> </a>
                                             </li>
                                             <li class="breadcrumb-item"><a href="#!">Dashboard</a>
                                             </li>
