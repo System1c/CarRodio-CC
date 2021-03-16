@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include ('assets/php/login.php');
+echo $_SESSION['err'];
+?>
 
 <html lang="en" >
 <head>
@@ -36,7 +40,7 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" name="uname"/>
+			<input type="text" placeholder="Email" name="eml"/>
 			<input type="password" placeholder="Password" name="psw"/>
 			<a href="#">Forgot your password?</a>
             <input type="submit" name="submit" value="Sign In">

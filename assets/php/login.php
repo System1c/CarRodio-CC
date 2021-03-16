@@ -1,26 +1,31 @@
 <?php
 include('dblog.php');
-
+session_start();
 if (isset($_POST['submit']))
 {
-    $logins = $useemnameg = $logerr = $sqllog = $sqllog1 = "";
-    $usemname = $_POST['uname'];
+    $logins = $useemnameg = $logerr = $sqllog =  $status1 = "";
+
+    $emal = $_POST['eml'];
     $paswd = $_POST['psw'];
 
-        $sqllog = "SELECT * FROM users WHERE email = '$usemname' AND passw = '$paswd'";
-        $rslog = mysqli_query($link, $sqllog);
-        $checklog1 = mysqli_fetch_array($rslog, MYSQLI_NUM);
-            if($checklog1[0]>1){
+    $sqllog = "SELECT * FROM users WHERE email = '$emal' AND passw = '$paswd'";
+    $rslog = mysqli_query($link, $sqllog);
+    $count = mysqli_num_rows($rslog);
+
+    if($count == 1){
                 $status1 = "true";
                 $_COOKIE[$status1]=$logins;
                 $_COOKIE['savedemail']=$useemnameg;
-                $logerr = "false";
-                session_destroy();
-                echo 'it logs in but fuck you regardless';
-            }
+                $_SESSION['err']= "";
+            echo 'it logs in but fuck you regardless';
+            header("Location: ../../dash/index.html");
+
+        }
             else{
                 $status1 = "false";
-                $logerr = "true";
+                $_COOKIE[$status1]=$logins;
+                $_SESSION['err']= "Incorrect Login Information";
+                header("Location: ../../login.php");
             }
 
 
