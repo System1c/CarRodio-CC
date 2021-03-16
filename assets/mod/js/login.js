@@ -10,7 +10,8 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+/*
 
 cSignin.addEventListener('click', () => {
 	window.location.href = 'dash/index.html';
-});
+});*/

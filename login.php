@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -27,7 +28,7 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form action="assets/php/login.php" method="post">
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -35,10 +36,10 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="email" placeholder="Email" name="uname"/>
+			<input type="password" placeholder="Password" name="psw"/>
 			<a href="#">Forgot your password?</a>
-			<button id="cSignIn">Sign In</button>
+            <input type="submit" name="submit" value="Sign In">
 		</form>
 	</div>
 	<div class="overlay-container">
