@@ -17,7 +17,6 @@ if (isset($_POST['submit']))
                 $_COOKIE[$status1]=$logins;
                 $_COOKIE['savedemail']=$useemnameg;
                 $_SESSION['err']= "";
-            echo 'it logs in but fuck you regardless';
             header("Location: ../../dash/index.html");
 
         }
