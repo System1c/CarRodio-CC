@@ -5,7 +5,6 @@ session_start();
 if (isset($_POST['submit']))
 {
     $logins = $useemnameg = $logerr = $sqllog =  $status1 = "";
-
     $emal = $_POST['eml'];
     $paswd = $_POST['psw'];
     $sqllog = "SELECT * FROM users WHERE email = '$emal' AND passw = '$paswd'";
@@ -15,14 +14,15 @@ if (isset($_POST['submit']))
     if($count == 1){
                 $status1 = "true";
                 $_COOKIE[$status1]=$logins;
-/*              header("Location: ../../dash/index.php");*/
+                setcookie('err', 'No errors', time() + 7*24*60*60, '/');
+                setcookie('emal', $emal, time() + 7*24*60*60, '/');
+                header("Location: ../../dash/index.php");
         }
             else{
                 $status1 = "false";
                 $_COOKIE[$status1]=$logins;
-                $_SESSION['err']= "Incorrect Login Information";
+                setcookie('err', 'Login information is incorrect!', time() + 7*24*60*60, '/');
                 header("Location: ../../login.php");
-
             }
 
 

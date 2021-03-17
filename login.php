@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <?php
 include ('assets/php/login.php');
-print $_COOKIE['err'];
+if(!isset($_COOKIE['err'])){
+    setcookie('err', '', time() + 7*24*60*60, '/');
+    echo "";
+} else {
+    print $_COOKIE['err'];
+}
 
 ?>
 

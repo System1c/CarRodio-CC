@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 
   <head>
@@ -9,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Car Dealer Website Template</title>
+    <title>Our Cars</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
@@ -42,12 +44,12 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.php" class="logo">Car Dealer<em> Website</em></a>
+                        <a href="index.php" class="logo">Car.Rodio<em> Dealers</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="cars.html" class="active">Cars</a></li>
+                            <li><a href="cars.php" class="active">Cars</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
@@ -60,7 +62,8 @@
                                     <a class="dropdown-item" href="terms.html">Terms</a>
                                 </div>
                             </li>
-                            <li><a href="contact.html">Contact</a></li> 
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="login.php">Login</a> </li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -81,8 +84,8 @@
                     <div class="cta-content">
                         <br>
                         <br>
-                        <h2>Our <em>Cars</em></h2>
-                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula</p>
+                        <h2>Browse Our <em>Cars</em></h2>
+                        <p>Cars for any drive, any time</p>
                     </div>
                 </div>
             </div>
@@ -258,33 +261,59 @@
                         </div>
                     </div>
                     
-                    <div class="col-sm-4 offset-sm-4">
+                    <!--<div class="col-sm-4 offset-sm-4">
                       <div class="main-button text-center">
                           <a href="#">Search</a>
                       </div>
+                    </div>-->
+                    <br>
+                    <br>
+                    <div class="part1 wrap">
+                        <div class="part1 search">
+                            <input type="text" class="part1 searchTerm" placeholder="What are you looking for?">
+                            <button type="submit" class="part1 searchButton ">
+                                <i class="part1 fa fa-search main-button text-center"></i>
+                            </button>
+                        </div>
                     </div>
-                    <br>
-                    <br>
                 </form>
+
             </div>
 
             <div class="row">
-                <div class="col-lg-4">
+                <?php
+                include ('assets/php/dblog.php');
+                if (isset($_POST['submit'])){
+                    $term = $_POST['srch'];
+                    $sqllog = "SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE title = '$term'";
+                    $run = mysqli_query($link, $sqllog);
+                    $foundres = mysqli_num_rows($run);
+                if($foundres == 0){
+                    echo $term;
+                    echo "Fuck you we don't have what you are looking for";
+                }
+                else {
+                    $loopResult = ''; // leave blank to start var for loop
+                    $result = "SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE title = '$term'";
+                    $rslog = mysqli_query($link, $result);
+                    while ($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
+                        $loopResult = '    
+ 	            <div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="assets/images/product-1-720x480.jpg" alt="">
+                            <img src="' . $row['img'] . '" alt="">
                         </div>
                         <div class="down-content">
                             <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
+                                <del><sup>$</sup>' . $row['oldpr'] . '</del> &nbsp; <sup>$</sup>' . $row['price'] . '
                             </span>
 
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                            <h4>' . $row['title'] . '</h4>
 
                             <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-dashboard"></i> ' . $row['type'] . ' &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-cube"></i> ' . $row['vcondition'] . ' &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-cog"></i> ' . $row['brand'] . ' &nbsp;&nbsp;&nbsp;
                             </p>
 
                             <ul class="social-icons">
@@ -293,131 +322,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-2-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                            </span>
-
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-3-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                            </span>
-
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-4-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                            </span>
-
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-5-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                            </span>
-
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-6-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                            </span>
-
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-                
+                ';
+                        echo $loopResult;
+                    }
+                }
+                }
+?>
             <nav>
               <ul class="pagination pagination-lg justify-content-center">
                 <li class="page-item">
@@ -449,8 +359,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p>
-                        Copyright © 2020 Company Name
-                        - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                        Copyright © 2020 CarRodio
                     </p>
                 </div>
             </div>

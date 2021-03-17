@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <?php
-$user="";
-$user = $_COOKIE['finame'];
-$_SESSION['err']="";
+include  ('assets/php/acinfo.php');
+$user= $a = $b = " ";
+$a = $_COOKIE['fname'];
+$b = $_COOKIE['lname'];
+$user = "$a $b";
 
 ?>
 <html lang="en">
@@ -178,7 +180,7 @@ $_SESSION['err']="";
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>Your Mum</span>
+                                    <span><?php print  $user;?></span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -333,7 +335,7 @@ $_SESSION['err']="";
                             <div class="pcoded-navigation-label">New Advertisement</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="form-elements-component.html" class="waves-effect waves-dark">
+                                    <a href="newad.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext">Create New Advertisement</span>
                                         <span class="pcoded-mcaret"></span>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
-$_COOKIE['err']= " ";
+
+
 ?>
 <html lang="en">
 
@@ -50,7 +51,7 @@ $_COOKIE['err']= " ";
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="index.php" class="active">Home</a></li>
-                            <li><a href="cars.html">Cars</a></li>
+                            <li><a href="cars.php">Cars</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
@@ -184,7 +185,7 @@ $_COOKIE['err']= " ";
             <br>
 
             <div class="main-button text-center">
-                <a href="cars.html">View Cars</a>
+                <a href="cars.php">View Cars</a>
             </div>
         </div>
     </section>
