@@ -1,7 +1,6 @@
 <?php
 include('dblog.php');
 session_start();
-
 if (isset($_POST['submit']))
 {
     $logins = $useemnameg = $logerr = $sqllog =  $status1 = "";
@@ -17,6 +16,8 @@ if (isset($_POST['submit']))
                 setcookie('err', 'No errors', time() + 7*24*60*60, '/');
                 setcookie('emal', $emal, time() + 7*24*60*60, '/');
                 header("Location: ../../dash/index.php");
+
+
         }
             else{
 
@@ -26,7 +27,7 @@ if (isset($_POST['submit']))
                 if($countad == 1){
                     $status1 = "true";
                     $_COOKIE[$status1]=$logins;
-                    setcookie('err', 'No errors', time() + 7*24*60*60, '/');
+                    setcookie('err', '', time() + 7*24*60*60, '/');
                     setcookie('aemal', $emal, time() + 7*24*60*60, '/');
                     header("Location: ../../admin-dash/index.php");
                 }

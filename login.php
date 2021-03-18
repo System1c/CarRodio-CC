@@ -24,7 +24,7 @@ if(!isset($_COOKIE['err'])){
 <h2>Sign In or Sign Up</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="assets/php/signup.php" method="post">
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -32,10 +32,11 @@ if(!isset($_COOKIE['err'])){
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
+			<input type="text" placeholder="First Name" name="fname" required/>
+            <input type="text" placeholder="Last Name" name="lname" required/>
+			<input type="email" placeholder="Email" name="remail" required/>
+			<input type="password" placeholder="Password" name="pswr" required/>
+			<button name="signup">Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -47,8 +48,8 @@ if(!isset($_COOKIE['err'])){
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="text" placeholder="Email" name="eml"/>
-			<input type="password" placeholder="Password" name="psw"/>
+			<input type="text" placeholder="Email" name="eml" required/>
+			<input type="password" placeholder="Password" name="psw" required/>
 			<a href="#">Forgot your password?</a>
             <input type="submit" name="submit" value="Sign In">
 		</form>
