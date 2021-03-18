@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include  ('assets/php/adminacinfo.php');
+$user= $c = $d = " ";
+$c = $_COOKIE['afname'];
+$d = $_COOKIE['alname'];
+$user = "$c $d";
+
+?>
 
 <head>
     <title>Dashboard - Admin</title>
@@ -172,7 +180,7 @@
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>User Name</span>
+                                    <span><?php print  $user;?></span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -217,7 +225,7 @@
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="assets/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">User Name<i class="fa fa-caret-down"></i></span>
+                                        <span id="more-details"><?php print  $user;?><i class="fa fa-caret-down"></i></span>
                                     </div>
                                 </div>
                                 <div class="main-menu-content">
@@ -234,7 +242,7 @@
                             <div class="pcoded-navigation-label">Navigation</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="active">
-                                    <a href="index.html" class="waves-effect waves-dark">
+                                    <a href="index.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext">Dashboard</span>
                                         <span class="pcoded-mcaret"></span>
@@ -255,7 +263,7 @@
                             <div class="pcoded-navigation-label">Advertisements</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="bs-basic-table.html" class="waves-effect waves-dark">
+                                    <a href="adstat.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-receipt"></i><b>B</b></span>
                                         <span class="pcoded-mtext">Verify Ad</span>
                                         <span class="pcoded-mcaret"></span>
@@ -296,7 +304,7 @@
                                     <div class="col-md-4">
                                         <ul class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                <a href="index.php"> <i class="fa fa-home"></i> </a>
                                             </li>
                                             <li class="breadcrumb-item"><a href="#!">Dashboard</a>
                                             </li>
@@ -546,12 +554,12 @@
                                 </div>
                                 <div id="styleSelector"> </div>
                             </div>
-                        </div>
+                       <!-- </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Warning Section Starts -->
     <!-- Older IE warning message -->
     <!--[if lt IE 10]>

@@ -6,6 +6,7 @@ if(!isset($_COOKIE['err'])){
     echo "";
 } else {
     print $_COOKIE['err'];
+
 }
 
 ?>

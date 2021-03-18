@@ -285,7 +285,7 @@
                 <?php
 include('assets/php/dblog.php');
 $loopResult = ''; // leave blank to start var for loop
-$result = 'SELECT title, vcondition, type, brand, price, img, oldpr FROM advert';
+$result = 'SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE status="v"';
 $rslog = mysqli_query($link, $result);
 while($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
     $loopResult = '

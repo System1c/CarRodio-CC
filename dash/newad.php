@@ -120,7 +120,7 @@ $user = "$c $d";
                             </div>
                         </div>
                         <a href="index.php">
-                            <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+                            <img class="img-fluid" src="" alt="Logo" />
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
@@ -313,27 +313,26 @@ $user = "$c $d";
                                                     </div>
                                                     <div class="card-block">
 
-                                                        <form>
-
+                                                        <form action="assets/php/postad.php" method="post">
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Ad Title</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Enter Title for the Advertisement">
+                                                                    <input type="text" class="form-control" placeholder="Enter Title for the Advertisement" name="adtit">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Select Condition of the Vehicle</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="used">Used</option>
-                                                                        <option value="new">New</option>
+                                                                    <select name="cond" class="form-control">
+                                                                        <option value="Used">Used</option>
+                                                                        <option value="New">New</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Select Type of Vehicle</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
+                                                                    <select name="ctype" class="form-control">
                                                                         <option value="Car">Car</option>
                                                                         <option value="Sedan">Sedan</option>
                                                                         <option value="SUV">SUV</option>
@@ -342,23 +341,24 @@ $user = "$c $d";
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Brand</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" placeholder="Enter Brand of the Vehicle" name="brand">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Price</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Enter the price of the Vehicle">
+                                                                    <input type="text" class="form-control" placeholder="Enter the price of the Vehicle" name="price">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Image Link</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Please enter link of the images of the car">
+                                                                    <input type="text" class="form-control" placeholder="Please enter link of the images of the car" name="link">
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">Placeholder</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Type your title in Placeholder">
-                                                                </div>
-                                                            </div>
+
 
                                                             <button  type="submit" class="btn btn-success waves-effect waves-light " name="submit" ><i class="icofont icofont-check-circled"></i>Submit for Verification</button>
                                                         </form>
@@ -381,7 +381,7 @@ $user = "$c $d";
                 </div>
             </div>
         </div>
-    </div>
+   <!-- </div>-->
 
 
     <!-- Warning Section Starts -->
