@@ -316,7 +316,7 @@ $user = "$c $d";
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Ad Title</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Enter Title for the Advertisement" name="adtit">
+                                                                    <input type="text" class="form-control" placeholder="Enter Title for the Advertisement" name="adtit" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
@@ -342,19 +342,19 @@ $user = "$c $d";
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Brand</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Enter Brand of the Vehicle" name="brand">
+                                                                    <input type="text" class="form-control" placeholder="Enter Brand of the Vehicle" name="brand" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Price</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Enter the price of the Vehicle" name="price">
+                                                                    <input type="text" class="form-control" placeholder="Enter the price of the Vehicle" name="price" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Image Link</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Please enter link of the images of the car" name="link">
+                                                                    <input type="text" class="form-control" placeholder="Please enter link of the images of the car" name="link" required>
                                                                 </div>
                                                             </div>
 

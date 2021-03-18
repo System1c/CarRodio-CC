@@ -290,7 +290,7 @@
                     $foundres = mysqli_num_rows($run);
                 if($foundres == 0){
                     echo $term;
-                    echo "Fuck you we don't have what you are looking for";
+                    echo "We don't have what you are looking for";
                 }
                 else {
                     $loopResult = ''; // leave blank to start var for loop
