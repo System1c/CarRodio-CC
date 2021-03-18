@@ -238,7 +238,7 @@ $user = "$a $b";
                                     </ul>
                                 </div>
                             </div>
-                            <div class="p-15 p-b-0">
+                            <!--<div class="p-15 p-b-0">
                                 <form class="form-material">
                                     <div class="form-group form-primary">
                                         <input type="text" name="footer-email" class="form-control">
@@ -246,7 +246,7 @@ $user = "$a $b";
                                         <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Friend</label>
                                     </div>
                                 </form>
-                            </div>
+                            </div>-->
                             <div class="pcoded-navigation-label">Navigation</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="active">
