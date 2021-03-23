@@ -1,24 +1,27 @@
 <?php
 include ('dblog.php');
-if (isset($_POST['signup'])) {
 
-    $fname=$_POST['fname'];
-    $lname = $_POST['lname'];
-    $remail = $_POST['remail'];
-    $pswr = $_POST['pswr'];
+if(isset($_SERVER['REQUEST_METHOD'])=="POST"
+&& isset($_POST['signup'])) {
+    $status = $user = "";
 
 
-    $sql="INSERT INTO users (firstname, lastname, email, passw) VALUES ('$fname','$lname','$remail','$pswr')";
-    $regu = mysqli_query($link, $sql);
+    $sql2 = "SELECT * FROM users WHERE email = '$remail'";
+    $rs = mysqli_query($link, $sql2);
+    $check = mysqli_fetch_array($rs, MYSQLI_NUM);
+    if ($check[0] > 1) {
+        $status = "true";
+        $_COOKIE[$status] = $user;
+    } else {
+        $sql = "INSERT INTO users (firstname, lastname, email, passw) VALUES ('$fename','$lename','$remail','$pswr')";
+        $regu = mysqli_query($link, $sql);
 
-    setcookie('emal', $remail, time() + 7*24*60*60, '/');
+        setcookie('emal', $remail, time() + 7 * 24 * 60 * 60, '/');
 
-    $email = $_COOKIE['emal'];
-
-
+        $email = $_COOKIE['emal'];
 
 
-
-    header('location: ../../dash/index.php');
-};
+        header('location: dash/index.php');
+    }
+}
 ?>

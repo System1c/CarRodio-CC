@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
+
 include  ('assets/php/acinfo.php');
-$user= $a = $b = " ";
+$user=" ";
 $a = $_COOKIE['fname'];
 $b = $_COOKIE['lname'];
 $user = "$a $b";

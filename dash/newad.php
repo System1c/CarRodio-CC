@@ -6,6 +6,8 @@ $c = $_COOKIE['fname'];
 $d = $_COOKIE['lname'];
 $user = "$c $d";
 
+
+
 ?>
 <html lang="en">
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 include  ('assets/php/adminacinfo.php');
-$user= $c = $d = " ";
+$user=  " ";
 $c = $_COOKIE['afname'];
 $d = $_COOKIE['alname'];
 $user = "$c $d";
