@@ -10,5 +10,15 @@ if (isset($_POST['verify']))
 
 }
 
+if (isset($_POST['reject']))
+{
+    $id = $_POST['verify'];
+
+    $ver = "UPDATE advert SET status = 'r' WHERE id= '$id'";
+    $verad = mysqli_query($link, $ver);
+    header("Location: ../../adstat.php");
+
+}
+
 
 ?>

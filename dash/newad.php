@@ -354,13 +354,11 @@ $user = "$c $d";
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">Image Link</label>
+                                                                <label class="col-sm-2 col-form-label">Upload File</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Please enter link of the images of the car" name="link" required>
+                                                                    <input type="file" class="form-control">
                                                                 </div>
                                                             </div>
-
-
                                                             <button  type="submit" class="btn btn-success waves-effect waves-light " name="submit" ><i class="icofont icofont-check-circled"></i>Submit for Verification</button>
                                                         </form>
                                                         </div>

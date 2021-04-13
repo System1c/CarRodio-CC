@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 
+
 $fename = $lename = $pswr=  $remail = $emailErr  = $passErr = $passErr2 = $status = $fenameErr = $lenameErr=  $ps1 = $ps2 = "";
 $err = "false";
 unset($emailErr);

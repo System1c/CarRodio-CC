@@ -190,7 +190,7 @@ $user = "$c $d";
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="user-profile.html">
+                                        <a href="prof.php">
                                             <i class="ti-user"></i> Profile
                                         </a>
                                     </li>
@@ -231,7 +231,7 @@ $user = "$c $d";
                                 <div class="main-menu-content">
                                     <ul>
                                         <li class="more-details">
-                                            <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
+                                            <a href="prof.php"><i class="ti-user"></i>View Profile</a>
                                             <a href="#!"><i class="ti-settings"></i>Settings</a>
                                             <a href="assets/php/logout.php"><i class="ti-layout-sidebar-left"></i>Logout</a>
                                         </li>
@@ -250,16 +250,24 @@ $user = "$c $d";
                                 </li>
                             </ul>
 
-                            <div class="pcoded-navigation-label">New Admin</div>
+                            <div class="pcoded-navigation-label">User Account Controls</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="form-elements-component.html" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                    <a href="newad.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-user"></i><b>FC</b></span>
                                         <span class="pcoded-mtext">Create New Admin</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
+                                <li class="">
+                                    <a href="userc.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-search"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Search User</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
                             </ul>
+
                             <div class="pcoded-navigation-label">Advertisements</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">

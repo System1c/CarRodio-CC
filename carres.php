@@ -282,7 +282,7 @@
 
             <div class="row">
                 <?php
-                include ('assets/php/dblog.php');
+                include('assets/php/Dblog.php');
                 if (isset($_POST['submit'])){
                     $term = $_POST['srch'];
                     $sqllog = "SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE title = '$term'";

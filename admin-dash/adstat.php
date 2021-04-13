@@ -251,12 +251,19 @@ $user = "$c $d";
                                 </li>
                             </ul>
 
-                            <div class="pcoded-navigation-label">New Admin</div>
+                            <div class="pcoded-navigation-label">User Account Controls</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="form-elements-component.html" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                    <a href="newad.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-user"></i><b>FC</b></span>
                                         <span class="pcoded-mtext">Create New Admin</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="userc.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-search"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Search User</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
@@ -271,8 +278,6 @@ $user = "$c $d";
                                     </a>
                                 </li>
                             </ul>
-
-
                             <div class="pcoded-navigation-label">Chart And Maps</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
@@ -365,7 +370,7 @@ $user = "$c $d";
                                                                    <td>'.$row['sellerid'].'</td>
                                                                   <td>'.$row['title'].'</td>
                                                                   <td><button class="btn waves-effect waves-light btn-success" name="verify" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Verify</button>
-                                                                 <button class="btn waves-effect waves-light btn-danger"><i class="icofont icofont-eye-alt"></i>Delete</button></td>
+                                                                 <button class="btn waves-effect waves-light btn-danger" name="reject" value="'.$row['id'].'"><i class="icofont icofont-eye-alt"></i>Reject</button></td>
                                                                  </tr>
                                                                 ';
                                                             echo $loopResult;

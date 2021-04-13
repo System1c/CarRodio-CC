@@ -109,7 +109,7 @@
             </div>
             <div class="row">
                 <?php
-                include('assets/php/dblog.php');
+                include('assets/php/Dblog.php');
                 $loopResult = ''; // leave blank to start var for loop
                 $result = 'SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE status="v"';
                 $rslog = mysqli_query($link, $result);

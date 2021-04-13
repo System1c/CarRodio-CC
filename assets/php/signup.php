@@ -1,11 +1,20 @@
 <?php
-include ('dblog.php');
+include_once('Dblog.php');
+include_once('sigClass.php');
+include_once('verifysig.php');
 
 if(isset($_SERVER['REQUEST_METHOD'])=="POST"
 && isset($_POST['signup'])) {
-    $status = $user = "";
 
+    $fename = $_POST["fname"];
+    $lename = $_POST["lname"];
+    $remail = $_POST["remail"];
+    $pswr = $_POST["repswr"];
 
+    $lgres = new sigClass($fename, $lename, $remail, $pswr);
+    $lgres->sigDb();
+
+/*
     $sql2 = "SELECT * FROM users WHERE email = '$remail'";
     $rs = mysqli_query($link, $sql2);
     $check = mysqli_fetch_array($rs, MYSQLI_NUM);
@@ -22,6 +31,6 @@ if(isset($_SERVER['REQUEST_METHOD'])=="POST"
 
 
         header('location: dash/index.php');
-    }
+    }*/
 }
 ?>
