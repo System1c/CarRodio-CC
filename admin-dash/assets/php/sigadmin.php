@@ -14,4 +14,3 @@ if(isset($_SERVER['REQUEST_METHOD'])=="POST"
     $lgres = new regad($fename, $lename, $remail, $pswr);
     $lgres->sigDb();
 }
-    ?>

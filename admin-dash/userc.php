@@ -2,18 +2,20 @@
 <?php
 include  ('assets/php/adminacinfo.php');
 
-$user= $c = $d = " ";
+$user= $c = $d = $fname = $lname = $email = $eml = $id = " ";
 $c = $_COOKIE['afname'];
 $d = $_COOKIE['alname'];
 $user = "$c $d";
 
-
+if(isset($_POST['schus'])) {
+    include  ('assets/php/acmgmt.php');
+}
 
 ?>
 <html lang="en">
 
 <head>
-    <title>Add Advert - Buyer</title>
+    <title>Search User - Admin</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -311,8 +313,8 @@ $user = "$c $d";
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <div class="page-header-title">
-                                        <h5 class="m-b-10">Create New Administrator</h5>
-                                        <p class="m-b-0">Enter the details of the new Admin</p>
+                                        <h5 class="m-b-10">Search and Edit Users</h5>
+                                        <p class="m-b-0">Enter the details of the User</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -322,7 +324,7 @@ $user = "$c $d";
                                         </li>
                                         <li class="breadcrumb-item"><a href="index.php">Dashboard</a>
                                         </li>
-                                        <li class="breadcrumb-item"><a href="#!">Add New Admin</a>
+                                        <li class="breadcrumb-item"><a href="#!">Search User</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -346,7 +348,7 @@ $user = "$c $d";
                                                 </div>
 
                                                 <div class="card-block">
-                                                    <form action="assets/php/acmgmt.php" method="post">
+                                                    <form action="userc.php" method="post">
                                                         <div class="form-group row">
                                                             <div class="col-sm-6">
                                                                 <input type="text" class="form-control form-control-lg" placeholder="Enter Email of User" name="uemail">
@@ -368,17 +370,17 @@ $user = "$c $d";
                                                     <div class="card-block">
                                                         <form class="form-material">
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" placeholder="First Name">
+                                                                <input type="text" name="footer-email" class="form-control" value="<?php print $fname ?>">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">First Name</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" placeholder="Last Name">
+                                                                <input type="text" name="footer-email" class="form-control" value="<?php print $lname ?>">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Last Name</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" placeholder="Email">
+                                                                <input type="text" name="footer-email" class="form-control" value="<?php print $eml ?>">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Email</label>
                                                             </div>
@@ -420,22 +422,26 @@ $user = "$c $d";
                                                                 </thead>
                                                                 <tbody>
                                                                 <?php
-/*                                                                $loopResult = ''; // leave blank to start var for loop
-                                                                $inte = 1;
-                                                                $result = 'SELECT id, title FROM advert WHERE status="p"';
-                                                                $rslog = mysqli_query($link, $result);
-                                                                while($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
-                                                                    $loopResult = '
- 	                                                            <tr>
-                                                                 <th scope="row">'.$inte.'</th>
-                                                                  <td>'.$row['title'].'</td>
-                                                                  <td><button class="btn waves-effect waves-light btn-danger" name="reject" value="'.$row['id'].'"><i class="icofont icofont-eye-alt"></i>Delete</button></td>
-                                                                 </tr>
-                                                                ';
-                                                                    $inte++;
-                                                                    echo $loopResult;
+                                                                if(isset($_POST['schus'])) {
+                                                                    include  ('assets/php/advertreq.php');
                                                                 }
-                                                                */?>
+
+                                                                /*                                                                $loopResult = ''; // leave blank to start var for loop
+                                                                                                                                $inte = 1;
+                                                                                                                                $result = 'SELECT id, title FROM advert WHERE status="p"';
+                                                                                                                                $rslog = mysqli_query($link, $result);
+                                                                                                                                while($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
+                                                                                                                                    $loopResult = '
+                                                                                                                                 <tr>
+                                                                                                                                 <th scope="row">'.$inte.'</th>
+                                                                                                                                  <td>'.$row['title'].'</td>
+                                                                                                                                  <td><button class="btn waves-effect waves-light btn-danger" name="reject" value="'.$row['id'].'"><i class="icofont icofont-eye-alt"></i>Delete</button></td>
+                                                                                                                                 </tr>
+                                                                                                                                ';
+                                                                                                                                    $inte++;
+                                                                                                                                    echo $loopResult;
+                                                                                                                                }
+                                                                                                                                */?>
                                                                 </tbody>
                                                             </table>
                                                         </div>

@@ -1,24 +1,48 @@
 <?php
-include_once ('Dblog.php');
 include_once ('queryuser.php');
-
-
-
 class usercontrol extends queryuser {
 
-    public $eml;
 
-    function __constructor($email){
-        $this->eml = $email;
+    public $email;
+    public $fname;
+    public $lname;
+    public $id;
+
+    function __construct($email){
+        $this->email = $email;
     }
 
-    public function showUsers(){
-        $idfk = new queryuser($this->eml);
-        $datas = $idfk->getUser($this->eml);
-        return $datas;
+    function queryUserDetails(){
+        $sD2 = new queryuser($this->email);
+        $det = $sD2->getUserDetails();
+        foreach ($det as $data){
+            $this->id = $data['id'];
+            $this->fname = $data['firstname'];
+            $this->lname = $data['lastname'];
+            $this->email = $data['email'];
+
+        }
     }
+
+    function showFname(){
+        return $this->fname;
+    }
+    function showLname(){
+        return $this->lname;
+    }
+    function showEmail(){
+        return $this->email;
+    }
+
+    function storeId(){
+        return $this->id;
+    }
+
+
 
 }
+
+
 /*
 if (isset($_POST['schus'])){
     $email = $_POST["uemail"];
@@ -31,4 +55,3 @@ if (isset($_POST['schus'])){
     $email = $q2['email'];
 }*/
 
-?>
