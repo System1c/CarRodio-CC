@@ -109,67 +109,8 @@
             </div>
             <div class="row">
                 <?php
-/*                include('assets/php/queryAd.php');*/
-                /*$loopResult = ''; // leave blank to start var for loop
-                $result = 'SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE status="v"';
-                $rslog = mysqli_query($link, $result);
-                $count = 0;
-                while($count < 3 && $row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
-                    $count++;
-                    $loopResult = '
- 	              <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="'.$row['img'].'" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>'.$row['oldpr'].'</del> &nbsp; <sup>$</sup>'.$row['price'].'
-                            </span>
-
-                            <h4>'.$row['title'].'</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> '.$row['type'].' &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> '.$row['vcondition'].' &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> '.$row['brand'].' &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-';
-                    echo $loopResult;
-                }*/
+                include('assets/php/dispFad.php');
                 ?>
-                <!--<div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-1-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>11999 </del> &nbsp; <sup>$</sup>11779
-                            </span>
-
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1800 cc &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>-->
-
             </div>
 
             <br>
