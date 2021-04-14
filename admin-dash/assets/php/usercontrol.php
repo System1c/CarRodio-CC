@@ -20,7 +20,6 @@ class usercontrol extends queryuser {
             $this->fname = $data['firstname'];
             $this->lname = $data['lastname'];
             $this->email = $data['email'];
-
         }
     }
 

@@ -90,6 +90,9 @@ if(isset($_POST['schus'])) {
     $_SESSION['eml'] = $ur->showEmail();
     $id = $ur->storeId();
     $_SESSION['idd'] = $id;
+
+
+
 }
 
 ?>

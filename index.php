@@ -109,8 +109,8 @@
             </div>
             <div class="row">
                 <?php
-                include('assets/php/Dblog.php');
-                $loopResult = ''; // leave blank to start var for loop
+/*                include('assets/php/queryAd.php');*/
+                /*$loopResult = ''; // leave blank to start var for loop
                 $result = 'SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE status="v"';
                 $rslog = mysqli_query($link, $result);
                 $count = 0;
@@ -143,7 +143,7 @@
                 </div>
 ';
                     echo $loopResult;
-                }
+                }*/
                 ?>
                 <!--<div class="col-lg-4">
                     <div class="trainer-item">
