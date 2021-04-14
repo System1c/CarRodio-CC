@@ -360,7 +360,9 @@ $user = "$c $d";
                                                         </thead>
                                                         <tbody>
                                                         <?php
-                                                        $loopResult = ''; // leave blank to start var for loop
+                                                        include ('assets/php/verifyAd.php');
+
+                                                        /*$loopResult = ''; // leave blank to start var for loop
                                                         $result = 'SELECT id, title, sellerid FROM advert WHERE status="p"';
                                                         $rslog = mysqli_query($link, $result);
                                                         while($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
@@ -374,7 +376,7 @@ $user = "$c $d";
                                                                  </tr>
                                                                 ';
                                                             echo $loopResult;
-                                                        }
+                                                        }*/
                                                         ?>
                                                         </tbody>
                                                     </table>

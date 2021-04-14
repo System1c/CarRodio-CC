@@ -1,4 +1,5 @@
 <?php
+include_once ('Dblog.php');
 class addb extends Dblog{
 
 

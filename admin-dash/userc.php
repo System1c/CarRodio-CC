@@ -351,7 +351,7 @@ if(isset($_POST['schus'])) {
                                                     <form action="userc.php" method="post">
                                                         <div class="form-group row">
                                                             <div class="col-sm-6">
-                                                                <input type="text" class="form-control form-control-lg" placeholder="Enter Email of User" name="uemail">
+                                                                <input type="text" class="form-control form-control-lg" placeholder="Enter Email of User" name="uemail" required>
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <button  type="submit" class="btn btn-success waves-effect waves-light" name="schus" ><i class="icofont icofont-check-circled"></i>Search User</button>
@@ -368,28 +368,32 @@ if(isset($_POST['schus'])) {
                                                         <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
                                                     </div>
                                                     <div class="card-block">
-                                                        <form class="form-material">
+                                                        <form class="form-material" method="post" action="assets/php/acmgmt.php">
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" value="<?php print $fname ?>">
+                                                                <input type="text" name="fname" class="form-control" value="<?php print $_SESSION["fname"] ?>" required>
+                                                                <?php echo $_SESSION["fenameErr"] ?>
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">First Name</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" value="<?php print $lname ?>">
+                                                                <input type="text" name="lname" class="form-control" value="<?php print $_SESSION['lname'] ?>" required>
+                                                                <?php echo $_SESSION["lenameErr"] ?>
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Last Name</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" value="<?php print $eml ?>">
+                                                                <input type="text" name="email" class="form-control" value="<?php print $_SESSION['eml'] ?>" required>
+                                                                <?php echo $_SESSION["emailErr"] ?>
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Email</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" placeholder="Password">
+                                                                <input type="password" name="pswr" class="form-control" placeholder="Password" required>
+                                                                <?php echo $_SESSION["passErr"] ?>
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Password</label>
                                                             </div>
-                                                            <button  type="submit" class="btn btn-success waves-effect waves-light " name="submit" ><i class="icofont icofont-check-circled"></i>Confirm Changes</button>
+                                                            <button  type="submit" class="btn btn-success waves-effect waves-light " name="subch" ><i class="icofont icofont-check-circled"></i>Confirm Changes</button>
 
                                                         </form>
                                                     </div>
@@ -409,7 +413,7 @@ if(isset($_POST['schus'])) {
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <form id="adinfo" name="adinfo" method="post" action="assets/php/delverad.php">
+                                                <form id="adinfo" name="adinfo" method="post" action="assets/php/advertreq.php">
                                                     <div class="card-block table-border-style">
                                                         <div class="table-responsive">
                                                             <table class="table">
