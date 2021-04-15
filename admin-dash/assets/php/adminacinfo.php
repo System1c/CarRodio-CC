@@ -1,10 +1,10 @@
 <?php
-include_once ('dblog.php');
+include_once ('Dblog.php');
 include_once ('user.php');
 
 $email = $_COOKIE['aemal'];
-$lsg = new User($email);
-
+$lsg = new user($email);
+$lsg->getAdminName();
 /*$email = $_COOKIE['aemal'];
 
 $sqllog = "SELECT firstname, lastname FROM admin WHERE email = '$email'";

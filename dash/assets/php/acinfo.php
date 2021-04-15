@@ -3,7 +3,7 @@
 include_once ('SellDblog.php ');
 include_once ('seller.php');
 
-$email = $_COOKIE['aemal'];
+$email = $_COOKIE['emal'];
 $lsg = new Seller($email);
 
 /*session_start();

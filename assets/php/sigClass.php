@@ -25,6 +25,8 @@ class sigClass extends verifysig
             $sDb->signDb();
             header('location: dash/index.php');
         }
+
+
     }
 
     function inc(){

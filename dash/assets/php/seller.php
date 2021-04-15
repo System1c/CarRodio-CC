@@ -18,12 +18,12 @@ class Seller extends SellDblog {
         $first = $res['firstname'];
         $last = $res['lastname'];
 
-        if (!isset($_COOKIE['afname'])) {
-            setcookie('afname', $first, time() + 7 * 24 * 60 * 60, '/');
-            setcookie('alname', $last, time() + 7 * 24 * 60 * 60, '/');
+        if (!isset($_COOKIE['fname'])) {
+            setcookie('fname', $first, time() + 7*24*60*60, '/');
+            setcookie('lname', $last,  time() + 7*24*60*60, '/');
         } else {
-            setcookie('afname', $first, time() + 7 * 24 * 60 * 60, '/');
-            setcookie('alname', $last, time() + 7 * 24 * 60 * 60, '/');
+            setcookie('fname', $first,  time() + 7*24*60*60, '/');
+            setcookie('lname', $last,  time() + 7*24*60*60, '/');
         }
     }
 

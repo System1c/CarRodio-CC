@@ -11,7 +11,7 @@ class SellDblog
     {
         $this->servername = "localhost";
         $this->username = "root";
-        $this->password = "1234";
+        $this->password = "";
         $this->dbname = "carrodio";
 
         $con = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
