@@ -1,4 +1,4 @@
-<?php
+ <?php
 include_once ('addetails.php');
 include_once ('addb.php');
 include_once ('Dblog.php');

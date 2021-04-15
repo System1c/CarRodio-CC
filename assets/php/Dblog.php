@@ -10,7 +10,7 @@ class Dblog {
     protected function conn(){
         $this->servername = "localhost";
         $this->username = "root";
-        $this->password = "";
+        $this->password = "1234";
         $this->dbname = "carrodio";
 
         $con = new mysqli($this->servername, $this->username, $this->password, $this->dbname );
