@@ -283,40 +283,8 @@
             <div class="row">
 
                 <?php
-include('assets/php/Dblog.php');
-$loopResult = ''; // leave blank to start var for loop
-$result = 'SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE status="v"';
-$rslog = mysqli_query($link, $result);
-while($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
-    $loopResult = '
- 	<div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="'.$row['img'].'" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>'.$row['oldpr'].'</del> &nbsp; <sup>$</sup>'.$row['price'].'
-                            </span>
-
-                            <h4>'.$row['title'].'</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> '.$row['type'].' &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> '.$row['vcondition'].' &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cog"></i> '.$row['brand'].' &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-';
-    echo $loopResult;
-}
-?>
+            include('assets/php/carAd.php');
+        ?>
 
             <br>
                 

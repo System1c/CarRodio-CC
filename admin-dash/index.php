@@ -278,12 +278,12 @@ $user = "$c $d";
                                     </a>
                                 </li>
                             </ul>
-                            <div class="pcoded-navigation-label">Chart And Stats</div>
+                            <div class="pcoded-navigation-label">Statistics</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="chart-morris.html" class="waves-effect waves-dark">
+                                    <a href="chart-morris.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i><b>C</b></span>
-                                        <span class="pcoded-mtext">Charts</span>
+                                        <span class="pcoded-mtext">Graphical Breakdown</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
@@ -439,6 +439,19 @@ $user = "$c $d";
                                                 </div>
                                             </div>
                                             <div class="col-xl-4 col-md-12">
+                                                <div class="card mat-clr-stat-card text-white red ">
+                                                    <div class="card-block">
+                                                        <div class="row">
+                                                            <div class="col-3 text-center bg-c-red">
+                                                                <i class="fas fa-star mat-icon f-24"></i>
+                                                            </div>
+                                                            <div class="col-9 cst-cont">
+                                                                <h5>2.12 Stars</h5>
+                                                                <p class="m-b-0">Average Buyer Rating</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="card mat-clr-stat-card text-white green ">
                                                     <div class="card-block">
                                                         <div class="row">
@@ -447,17 +460,15 @@ $user = "$c $d";
                                                             </div>
                                                             <div class="col-9 cst-cont">
                                                                 <h5>4.21 Stars</h5>
-                                                                <p class="m-b-0">Average Rating</p>
+                                                                <p class="m-b-0">Average Seller Rating</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
                                             <!-- Material statustic card end -->
                                             <!-- order-visitor start -->
 
@@ -468,41 +479,14 @@ $user = "$c $d";
 
 
 
-                                            <div class="col-xl-6 col-md-12">
+                                            <div class="col-xl-12 col-md-12">
                                                 <div class="row">
-                                                    <!-- sale card start -->
-
                                                     <div class="col-md-6">
                                                         <div class="card text-center order-visitor-card">
                                                             <div class="card-block">
                                                                 <h6 class="m-b-0">Total Views</h6>
                                                                 <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-down m-r-15 text-c-red"></i>752</h4>
                                                                 <p class="m-b-0">48% From Last 24 Hours</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card bg-c-red total-card">
-                                                            <div class="card-block">
-                                                                <div class="text-left">
-                                                                    <h4>489</h4>
-                                                                    <p class="m-0">Total Good Reviews</p>
-                                                                </div>
-                                                                <span class="label bg-c-red value-badges">15%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card bg-c-green total-card">
-                                                            <div class="card-block">
-                                                                <div class="text-left">
-                                                                    <h4>$5782</h4>
-                                                                    <p class="m-0">Income Status</p>
-                                                                </div>
-                                                                <span class="label bg-c-green value-badges">20%</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -515,17 +499,32 @@ $user = "$c $d";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card text-center order-visitor-card">
-                                                            <div class="card-block">
-                                                                <h6 class="m-b-0">Monthly Earnings</h6>
-                                                                <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-up m-r-15 text-c-green"></i>$259,012</h4>
-                                                                <p class="m-b-0">36% From Last 6 Months</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- sale card end -->
                                                 </div>
+                                            </div>
+                                <div class="col-xl-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card text-center order-visitor-card">
+                                                <div class="card-block">
+                                                    <h6 class="m-b-0">Monthly Earnings</h6>
+                                                    <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-up m-r-15 text-c-green"></i>120,512</h4>
+                                                    <p class="m-b-0">48% From Last 6 Months</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card text-center order-visitor-card">
+                                                <div class="card-block">
+                                                    <h6 class="m-b-0">Total Sales</h6>
+                                                    <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-up m-r-15 text-c-green"></i>992</h4>
+                                                    <p class="m-b-0">22% From Last 6 Months</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    <!-- sale card end -->
+                                         </div>
                                             </div>
 
                                             <!--  sale analytics end -->
@@ -539,7 +538,7 @@ $user = "$c $d";
                                                                 <h6>Published Ads</h6>
                                                                 <h5 class="m-b-30 f-w-700">53<span class="text-c-green m-l-10">+1.69%</span></h5>
                                                                 <div class="progress">
-                                                                    <div class="progress-bar bg-c-red" style="width:25%"></div>
+                                                                    <div class="progress-bar bg-c-red" style="width:92%"></div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-md-6">

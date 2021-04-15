@@ -1,9 +1,10 @@
 <?php
-class queryAD extends Dblog {
+class queryAD{
 
      function queryfAd(){
-        $sql = 'SELECT title, vcondition, type, brand, price, img, oldpr FROM advert WHERE status="v"';
-
+         $qad = new refAd();
+         $fad = $qad->adQuery();
+            return $fad;
     }
 
 
