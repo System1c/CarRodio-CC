@@ -1,9 +1,24 @@
 <?php
-include_once ('usercontrol.php');
-include_once ('queryuser.php');
-include_once ('subAd.php');
+include_once ('queryEdAd.php');
+include_once('editAdQ.php');
+session_start();
 
-if (isset($_POST['submit'])) {
+$aid = $_SESSION['adid'];
+
+$lsg = new queryEdAd($aid);
+$res = $lsg->queryEAd();
+foreach ($res as $re) {
+    $tit = $re['title'];
+    $cond = $re['vcondition'];
+    $stype = $re['type'];
+    $brd = $re['brand'];
+    $prc = $re['price'];
+    $oprc = $re['oldpr'];
+}
+
+
+if (isset($_POST['update'])) {
+    $aid2 = $_SESSION['adid'];
     $title = $_POST['adtit'];
     $condition = $_POST['cond'];
     $type = $_POST['ctype'];
@@ -11,15 +26,12 @@ if (isset($_POST['submit'])) {
     $price = $_POST['price'];
     $email = $_COOKIE['emal'];
     $dpr = $_POST['dprice'];
+
     $filename = $_FILES['file']['name'];
     $destination = '../../../imgstore/' . $filename;
 
-    $ur = new usercontrol($email);
-    $ur->queryUserDetails();
-    $id = $ur->storeId();
-
-    $rs = new subAd($title, $condition, $type, $brand, $price, $dpr, $id, $filename);
-    $rs->addAd();
+    $rs = new editAdQ($aid2, $title, $condition, $type, $brand, $price, $dpr, $filename);
+    $rs->updAd();
 
     // name of the uploaded file
 
@@ -38,12 +50,7 @@ if (isset($_POST['submit'])) {
         echo "File too large!";
     } else {
         move_uploaded_file($file, $destination);
-        $rs->addImg();
-        header('location: ../../newad.php');
+        $rs->updImg();
+        header('location: ../../editAd.php');
     }
 }
-
-
-
-
-?>

@@ -2,6 +2,7 @@
 include_once ('queryAD.php');
 include_once ('refAd.php');
 include_once ('Dblog.php');
+include_once ('queryImg.php');
 
 $ad1 = new queryAD();
 $res1 = $ad1->queryfAd();
@@ -9,10 +10,13 @@ $count = 0;
 
 foreach ($res1 as $data1){
 if ($count < 3){
+    $uc = new queryImg($data1['id']);
+    $link = $uc->qImg();
+    $clink = 'imgstore/'. $link;
         echo '<div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="' . $data1['img'] . '" alt="">
+                            <img src="'. $clink .'" alt="">
                         </div>
                         <div class="down-content">
                             <span>

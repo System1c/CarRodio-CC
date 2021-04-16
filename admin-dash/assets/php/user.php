@@ -3,7 +3,7 @@ class user extends Dblog {
 
     private $e1;
 
-    function __constructor($eml){
+    function __construct($eml){
         $this->e1 = $eml;
     }
 

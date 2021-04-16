@@ -3,8 +3,10 @@ include_once ('Dblog.php');
 include_once ('user.php');
 
 $email = $_COOKIE['aemal'];
-$lsg = new user($email);
+$lsg = new User($email);
 $lsg->getAdminName();
+
+
 /*$email = $_COOKIE['aemal'];
 
 $sqllog = "SELECT firstname, lastname FROM admin WHERE email = '$email'";

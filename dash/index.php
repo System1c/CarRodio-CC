@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <?php
 
 include  ('assets/php/acinfo.php');
@@ -8,8 +9,6 @@ $b = $_COOKIE['lname'];
 $user = "$a $b";
 
 ?>
-<html lang="en">
-
 <head>
     <title>Dashboard - Buyer</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
@@ -259,27 +258,22 @@ $user = "$a $b";
                                 </li>
                             </ul>
 
-                            <div class="pcoded-navigation-label">New Advertisement</div>
+                            <div class="pcoded-navigation-label">Advertisement</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
                                     <a href="newad.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                        <span class="pcoded-mtext">Create New Advertisement</span>
+                                        <span class="pcoded-micon"><i class="ti-star"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Add New Advertisement</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                            </ul>
-
-
-                        <div class="pcoded-navigation-label">All Advertisements</div>
-                        <ul class="pcoded-item pcoded-left-item">
-                            <li class="">
-                                <a href="allad.php" class="waves-effect waves-dark">
-                                    <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                    <span class="pcoded-mtext">All Advertisements</span>
-                                    <span class="pcoded-mcaret"></span>
-                                </a>
-                            </li>
+                                <li class="">
+                                    <a href="allad.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-search"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Posted Advertisements</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
                         </ul>
                 </div>
 

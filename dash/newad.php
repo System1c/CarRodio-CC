@@ -334,10 +334,17 @@ if (isset($_POST['submit']) && $err == "false") {
                             </ul>
                             <div class="pcoded-navigation-label">Advertisement</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="active">
+                                <li class="">
                                     <a href="newad.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-micon"><i class="ti-star"></i><b>FC</b></span>
                                         <span class="pcoded-mtext">Add New Advertisement</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="allad.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-search"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Posted Advertisements</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
@@ -385,7 +392,7 @@ if (isset($_POST['submit']) && $err == "false") {
                                                     </div>
                                                     <div class="card-block">
 
-                                                        <form action="assets/php/postad.php" method="post">
+                                                        <form action="assets/php/postad.php" method="post" enctype="multipart/form-data">
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Ad Title</label>
                                                                 <div class="col-sm-10">
@@ -421,13 +428,19 @@ if (isset($_POST['submit']) && $err == "false") {
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Price</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" placeholder="Enter the price of the Vehicle" name="price" required>
+                                                                    <input type="text" class="form-control" placeholder="Enter the price of the Vehicle" name="dprice" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">Upload File</label>
+                                                                <label class="col-sm-2 col-form-label">Discount Price</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="file" class="form-control">
+                                                                    <input type="text" class="form-control" placeholder="Enter the discounted price of the Vehicle" name="price" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Upload Image</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="file" class="form-control" name="file">
                                                                 </div>
                                                             </div>
                                                             <button  type="submit" class="btn btn-success waves-effect waves-light " name="submit" ><i class="icofont icofont-check-circled"></i>Submit for Verification</button>

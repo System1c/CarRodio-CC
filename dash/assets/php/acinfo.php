@@ -1,10 +1,11 @@
 <?php
 
-include_once ('SellDblog.php ');
-include_once ('seller.php');
+include_once ('Dblog.php');
+include_once ('querySeller.php');
 
 $email = $_COOKIE['emal'];
-$lsg = new Seller($email);
+$lsg = new querySeller($email);
+$lsg->getUsername();
 
 /*session_start();
 include ('SellDblog.php');

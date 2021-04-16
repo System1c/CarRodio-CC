@@ -207,7 +207,7 @@ $user = "$c $d";
                                     </li>
                                     <li class="waves-effect waves-light">
                                         <a href="assets/php/logout.php">
-                                            <i class="ti-layout-sidebar-left"></i>Logout?>
+                                            <i class="ti-layout-sidebar-left"></i>Logout
                                         </a>
                                     </li>
                                 </ul>
