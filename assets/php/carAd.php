@@ -4,19 +4,21 @@ include_once('queryAD.php');
 include_once('refAd.php');
 include_once('Dblog.php');
 include_once ('queryImg.php');
-$ad = new queryAD();
-$res = $ad->queryfAd();
-$count =0;
+
 
 if (isset($_POST['wlist'])){
     $count++;
     $id = $_POST['wlist'];
     setcookie($id, $id , time() + 7*24*60*60, '/');
+    $ad->saveWlist();
 }
 
 
 
 
+$ad = new queryAD();
+$res = $ad->queryfAd();
+$count =0;
 foreach ($res as $data) {
     $uc = new queryImg($data['id']);
     $link = $uc->qImg();

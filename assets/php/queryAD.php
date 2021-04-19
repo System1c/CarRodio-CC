@@ -7,5 +7,11 @@ class queryAD{
             return $fad;
     }
 
+    function saveWlist(){
+         $sql = "INSERT into wlist(adid, uid) VALUES ($aid, $usid0)";
+         $this->conn()->query($sql);
+
+    }
+
 
 }
