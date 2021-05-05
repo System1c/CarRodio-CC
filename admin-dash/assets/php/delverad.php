@@ -17,7 +17,6 @@ if (isset($_POST['reject']))
     $ver = new rejverAd($id);
     $ver->rejAd();
     header("Location: ../../adstat.php");
-
 }
 
 

@@ -6,18 +6,20 @@ class sigClass extends verifysig
     public $lname;
     public $eml;
     public $psw;
+    public $phr;
 
-    function __construct($fn, $ln, $eml, $pas)
+    function __construct($fn, $ln, $eml, $pas, $ph)
     {
         $this->fname = $fn;
         $this->lname = $ln;
         $this->email = $eml;
         $this->passw = $pas;
+        $this->phr = $ph;
     }
 
     function sigDb()
     {
-        $sDb = new verifysig($this->fname, $this->lname,$this->email, $this->passw);
+        $sDb = new verifysig($this->fname, $this->lname,$this->email, $this->passw, $this->phr);
         $num1Rows = $sDb->vsDb();
         if ($num1Rows != 0) {
             $this->inc();
@@ -25,8 +27,6 @@ class sigClass extends verifysig
             $sDb->signDb();
             header('location: dash/index.php');
         }
-
-
     }
 
     function inc(){

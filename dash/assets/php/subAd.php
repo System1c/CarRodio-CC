@@ -10,8 +10,10 @@ class subAd extends Dblog{
     public $sid;
     public $img;
     public $advid;
+    public $desc;
+    public $mile;
 
-    function __construct($tit, $cond, $typ, $brd, $price, $dispr, $selid, $iname)
+    function __construct($tit, $cond, $typ, $brd, $price, $dispr, $selid, $iname, $descr, $mlg)
     {
         $this->title = $tit;
         $this->condition =$cond;
@@ -21,11 +23,13 @@ class subAd extends Dblog{
         $this->dpr = $dispr;
         $this->sid = $selid;
         $this->img = $iname;
+        $this->desc = $descr;
+        $this->mile = $mlg;
     }
 
     function addAd(){
-        $sql = "INSERT INTO advert (title, vcondition, type, brand, price, sellerid, oldpr, status) 
-                    VALUES ('$this->title', '$this->condition', '$this->type', '$this->brand', '$this->prc', '$this->sid', '$this->dpr', 'p')";
+        $sql = "INSERT INTO advert (title, vcondition, type, brand, price, sellerid, oldpr, status, descr, mileage) 
+                    VALUES ('$this->title', '$this->condition', '$this->type', '$this->brand', '$this->prc', '$this->sid', '$this->dpr', 'p', '$this->desc', '$this->mile')";
         $this->conn()->query($sql);
         echo '<script>
             alert("Successfully Submitted New Advertisement");

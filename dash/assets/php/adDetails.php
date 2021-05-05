@@ -13,9 +13,22 @@ $id = $ur->storeId();
 $lsg = new queryUserAd($id);
 $res = $lsg->queryUAd();
 foreach ($res as $data){
+    $st = $data['status'];
+    switch ($st){
+        case "v":
+            $sts = "Live";
+            break;
+        case "p":
+            $sts = "Pending Verification";
+            break;
+        case "r":
+            $sts = "Rejected";
+            break;
+    }
     echo '<tr>
           <td>'.$data['id'].'</td>
            <td>'.$data['title'].'</td>
+           <td>'.$sts.'</td>
            <td><button class="btn waves-effect waves-light btn-success" name="update" value="'.$data['id'].'"><i class="icofont icofont-eye-alt"></i>Update</button></td>
          <td><button class="btn waves-effect waves-light btn-danger" name="delete" value="'.$data['id'].'"><i class="icofont icofont-eye-alt"></i>Delete</button></td>
           </tr>';

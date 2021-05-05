@@ -7,6 +7,10 @@ $c = $_COOKIE['afname'];
 $d = $_COOKIE['alname'];
 $user = "$c $d";
 
+
+
+
+
 if(isset($_POST['schus'])) {
     include  ('assets/php/acmgmt.php');
 }
@@ -370,26 +374,44 @@ if(isset($_POST['schus'])) {
                                                     <div class="card-block">
                                                         <form class="form-material" method="post" action="assets/php/acmgmt.php">
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="fname" class="form-control" value="<?php print $_SESSION["fname"] ?>" required>
-                                                                <?php echo $_SESSION["fenameErr"] ?>
+                                                                <input type="text" name="fname" class="form-control" value="<?php
+                                                                if (empty($_SESSION["fname"])){
+                                                                    echo " ";
+                                                                }
+                                                                else{
+                                                                    print $_SESSION["fname"];
+                                                                }
+                                                                ?>" required>
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">First Name</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="lname" class="form-control" value="<?php print $_SESSION['lname'] ?>" required>
-                                                                <?php echo $_SESSION["lenameErr"] ?>
+                                                                <input type="text" name="lname" class="form-control" value="<?php
+                                                                if (empty($_SESSION["lname"])){
+                                                                    echo " ";
+                                                                }
+                                                                else{
+                                                                    print $_SESSION["lname"];
+                                                                } ?>" required>
+
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Last Name</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="email" class="form-control" value="<?php print $_SESSION['eml'] ?>" required>
-                                                                <?php echo $_SESSION["emailErr"] ?>
+                                                                <input type="text" name="email" class="form-control" value="<?php
+                                                                if (empty($_SESSION["eml"])){
+                                                                    echo " ";
+                                                                }
+                                                                else{
+                                                                    print $_SESSION["eml"];
+                                                                } ?>" required>
+
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Email</label>
                                                             </div>
                                                             <div class="form-group form-default form-static-label">
                                                                 <input type="password" name="pswr" class="form-control" placeholder="Password" required>
-                                                                <?php echo $_SESSION["passErr"] ?>
+
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Password</label>
                                                             </div>

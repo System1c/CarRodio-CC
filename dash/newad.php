@@ -81,7 +81,6 @@ if (isset($_POST['submit']) && $err == "false") {
 
 ?>
 <html lang="en">
-
 <head>
     <title>Add Advert - Buyer</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
@@ -214,43 +213,13 @@ if (isset($_POST['submit']) && $err == "false") {
                             <li class="header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <i class="ti-bell"></i>
-                                    <span class="badge bg-c-red"></span>
+                                    <span class=""></span>
                                 </a>
                                 <ul class="show-notification">
                                     <li>
                                         <h6>Notifications</h6>
-                                        <label class="label label-danger">New</label>
                                     </li>
-                                    <li class="waves-effect waves-light">
-                                        <div class="media">
-                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
-                                            <div class="media-body">
-                                                <h5 class="notification-user"><?php print  $user;?></h5>
-                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                                                <span class="notification-time">30 minutes ago</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="waves-effect waves-light">
-                                        <div class="media">
-                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-4.jpg" alt="Generic placeholder image">
-                                            <div class="media-body">
-                                                <h5 class="notification-user">Joseph William</h5>
-                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                                                <span class="notification-time">30 minutes ago</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="waves-effect waves-light">
-                                        <div class="media">
-                                            <img class="d-flex align-self-center img-radius" src="assets/images/avatar-3.jpg" alt="Generic placeholder image">
-                                            <div class="media-body">
-                                                <h5 class="notification-user">Sara Soudein</h5>
-                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                                                <span class="notification-time">30 minutes ago</span>
-                                            </div>
-                                        </div>
-                                    </li>
+                                    <?php include ('assets/php/notif.php');?>
                                 </ul>
                             </li>
                             <li class="user-profile header-notification">
@@ -423,6 +392,18 @@ if (isset($_POST['submit']) && $err == "false") {
                                                                 <label class="col-sm-2 col-form-label">Brand</label>
                                                                 <div class="col-sm-10">
                                                                     <input type="text" class="form-control" placeholder="Enter Brand of the Vehicle" name="brand" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Description</label>
+                                                                <div class="col-sm-10">
+                                                                    <textarea class="form-control" placeholder="Please enter the Description of the Vehicle" name="descr" required></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Mileage</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" placeholder="Enter Mileage of the Vehicle" name="mlg" required>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">

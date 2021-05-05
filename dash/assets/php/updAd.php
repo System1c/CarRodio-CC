@@ -14,6 +14,8 @@ foreach ($res as $re) {
     $brd = $re['brand'];
     $prc = $re['price'];
     $oprc = $re['oldpr'];
+    $disc = $re['descr'];
+    $mile = $re['mileage'];
 }
 
 
@@ -26,11 +28,12 @@ if (isset($_POST['update'])) {
     $price = $_POST['price'];
     $email = $_COOKIE['emal'];
     $dpr = $_POST['dprice'];
-
+    $descr = $_POST['descr'];
+    $mileage = $_POST['mlg'];
     $filename = $_FILES['file']['name'];
     $destination = '../../../imgstore/' . $filename;
 
-    $rs = new editAdQ($aid2, $title, $condition, $type, $brand, $price, $dpr, $filename);
+    $rs = new editAdQ($aid2, $title, $condition, $type, $brand, $price, $dpr, $filename, $descr, $mileage);
     $rs->updAd();
 
     // name of the uploaded file

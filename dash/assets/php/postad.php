@@ -12,13 +12,15 @@ if (isset($_POST['submit'])) {
     $email = $_COOKIE['emal'];
     $dpr = $_POST['dprice'];
     $filename = $_FILES['file']['name'];
+    $descr = $_POST['descr'];
+    $mileage = $_POST['mlg'];
     $destination = '../../../imgstore/' . $filename;
 
     $ur = new usercontrol($email);
     $ur->queryUserDetails();
     $id = $ur->storeId();
 
-    $rs = new subAd($title, $condition, $type, $brand, $price, $dpr, $id, $filename);
+    $rs = new subAd($title, $condition, $type, $brand, $price, $dpr, $id, $filename, $descr, $mileage);
     $rs->addAd();
 
     // name of the uploaded file

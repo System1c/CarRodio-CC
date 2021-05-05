@@ -11,7 +11,7 @@ class queryEdAd extends Dblog{
     }
 
     function queryEAd(){
-        $sql = "SELECT title, vcondition, type, brand, price, oldpr from advert WHERE id='$this->adid'";
+        $sql = "SELECT title, vcondition, type, brand, price, oldpr, descr, mileage from advert WHERE id='$this->adid'";
         $res = $this->conn()->query($sql);
         while ($row = $res->fetch_assoc()) {
             $data[] = $row;

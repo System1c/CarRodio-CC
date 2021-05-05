@@ -1,5 +1,5 @@
 <?php
-class queryUserAd extends Dblog {
+class queryNotif extends Dblog {
 
     public $uid;
 
@@ -8,17 +8,13 @@ class queryUserAd extends Dblog {
         $this->uid = $id;
     }
 
-    function queryUAd(){
-        $sql = "SELECT id, title, status FROM advert WHERE sellerid='$this->uid'";
+    function queryNAd(){
+        $sql = "SELECT id, title, status FROM advert WHERE sellerid='$this->uid' AND ntf=0 ORDER BY postdate DESC";
         $res = $this->conn()->query($sql);
         while ($row = $res->fetch_assoc()) {
             $data[] = $row;
         }
         return $data;
     }
-
-
-
-
 
 }
