@@ -42,7 +42,7 @@ foreach ($res as $data) {
                             </p>
 
                             <ul class="social-icons">
-                                <li><a href="car-details.html" value="'.$data['id'].'">+ View Car</a></li>
+                                <li><a href="car-details.php?id=' . $data['id'] . '">+ View Car</a></li>
                                 <form action="assets/php/carAd.php" method="post">
                                 <li><button name="wlist" value="'.$data['id'].'">Wishlist This!</button> </li>
                                 </form>

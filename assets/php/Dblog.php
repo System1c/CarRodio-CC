@@ -16,6 +16,7 @@ class Dblog {
         $con = new mysqli($this->servername, $this->username, $this->password, $this->dbname );
 
         return $con;
+
     }
 
 }

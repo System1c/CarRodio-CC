@@ -28,8 +28,8 @@ class subAd extends Dblog{
     }
 
     function addAd(){
-        $sql = "INSERT INTO advert (title, vcondition, type, brand, price, sellerid, oldpr, status, descr, mileage) 
-                    VALUES ('$this->title', '$this->condition', '$this->type', '$this->brand', '$this->prc', '$this->sid', '$this->dpr', 'p', '$this->desc', '$this->mile')";
+        $sql = "INSERT INTO advert (title, vcondition, type, brand, price, sellerid, oldpr, status, descr, mileage, clk, complete) 
+                    VALUES ('$this->title', '$this->condition', '$this->type', '$this->brand', '$this->prc', '$this->sid', '$this->dpr', 'p', '$this->desc', '$this->mile', 0, 0)";
         $this->conn()->query($sql);
         echo '<script>
             alert("Successfully Submitted New Advertisement");
