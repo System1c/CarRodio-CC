@@ -295,17 +295,11 @@ if(isset($_POST['schus'])) {
                             <li class="">
                                 <a href="chart-morris.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i><b>C</b></span>
-                                    <span class="pcoded-mtext">Graphical Breakdown</span>
+                                    <span class="pcoded-mtext">Reports</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
-                            <li class="">
-                                <a href="map-google.html" class="waves-effect waves-dark">
-                                    <span class="pcoded-micon"><i class="ti-map-alt"></i><b>M</b></span>
-                                    <span class="pcoded-mtext">Maps</span>
-                                    <span class="pcoded-mcaret"></span>
-                                </a>
-                            </li>
+
                         </ul>
 
                     </div>

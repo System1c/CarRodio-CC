@@ -287,17 +287,11 @@ $user = "$c $d";
                                 <li class="">
                                     <a href="chart-morris.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-bar-chart-alt"></i><b>C</b></span>
-                                        <span class="pcoded-mtext">Graphical Breakdown</span>
+                                        <span class="pcoded-mtext">Reports</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li class="">
-                                    <a href="map-google.html" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"> <i class="ti-map-alt"></i><b>M</b></span>
-                                        <span class="pcoded-mtext"> Maps </span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
+
                             </ul>
 
                         </div>
@@ -335,82 +329,57 @@ $user = "$c $d";
                                     <div class="page-body">
                                         <div class="row">
                                             <!-- SITE VISIT CHART start -->
-                                            <div class="col-md-12 col-lg-6">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Number of New Ads (Week)</h5>
-                                                        <span>Ads Completed per Week</span>
+                                            <form method="post" action="assets/php/genrep.php">
+                                            <div class="col-xl-12 col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Seller Details</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i ></i></h4>
+                                                                <button class="btn waves-effect waves-light btn-success" name="sellgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                </tr>
+                                                                <p class="m-b-0"></p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="card-block">
-                                                        <div id="morris-site-visit"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- SITE VISIT CHART Ends -->
-                                            <!-- Bar Chart start -->
-                                            <div class="col-md-12 col-lg-6">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Number of New Users (Week)</h5>
-                                                        <span>The Number of Registered Users per Week for the Last Year</span>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div id="morris-bar-chart"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Bar Chart Ends -->
-                                            <!-- EXTRA AREA CHART start -->
-                                            <div class="col-lg-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Ads Completed per vehicle type</h5>
-                                                        <span>Ads completed per type of Vehicle</span>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div id="morris-extra-area"></div>
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Registered Ad details</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i ></i></h4>
+                                                                <button class="btn waves-effect waves-light btn-success" name="regadgen" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                <p class="m-b-0"></p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- EXTRA AREA CHART Ends -->
-                                            <!-- Area Chart start -->
-                                            <!--<div class="col-lg-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Area Chart</h5>
-                                                        <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                            <div class="col-xl-12 col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Highest Reached Ad</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i ></i></h4>
+                                                                <button class="btn waves-effect waves-light btn-success" name="highgen" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                <p class="m-b-0"></p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="card-block">
-                                                        <div id="area-example"></div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
-                                            <!-- Area Chart Ends -->
-                                            <!-- LINE CHART start -->
-                                            <!--<div class="col-md-12 col-lg-6">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Line Chart</h5>
-                                                        <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div id="line-example"></div>
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Most Engaged Buyer</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i ></i></h4>
+                                                                <button class="btn waves-effect waves-light btn-success" name="enggen" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                <p class="m-b-0"></p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>-->
-                                            <!-- LINE CHART Ends -->
-                                            <!-- Donut chart start -->
-                                            <!--<div class="col-md-12 col-lg-6">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Donut Chart</h5>
-                                                        <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div id="donut-example"></div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
+                                            </div>
+                                            </form>
                                             <!-- Donut chart Ends -->
                                         </div>
                                     </div>
