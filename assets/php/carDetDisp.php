@@ -3,6 +3,7 @@ include_once ('carDetQ.php');
 include_once ('Dblog.php');
 include_once ('queryAD.php');
 include_once ('queryUserDets.php');
+include_once ('queryC.php');
 $adid = $_GET['id'];
 
 $ad = new carDetQ($adid);
@@ -22,10 +23,13 @@ foreach ($cd as $data){
 $usd = new queryUserDets($sid);
 $ud = $usd->queryUserAd();
 foreach ($ud as $userd){
-    $fname = $userd['firstname'];
+     $fname = $userd['firstname'];
     $lname = $userd['lastname'];
     $emil = $userd['email'];
 }
+$cm = new queryC($adid);
+$cmd = $cm->queryCom();
+
 
     echo '
     <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
@@ -224,7 +228,7 @@ foreach ($ud as $userd){
                     
                     <h5>Rate this Seller!</h5>
                     <br>
-                    <form method="post" action="assets/php/rateB.php">
+                    <form method="post" action="rateB.php">
                     <select name="rate" id="rate">
                         <option value="1">1 Star</option>
                          <option value="2">2 Stars</option>
@@ -239,7 +243,6 @@ foreach ($ud as $userd){
                         </div>
                        <input type="hidden" value="'.$sid.'" name="seller">
                      <button type="submit" name="submit" value="'.$adid.'">Submit Review</button>   
-                     
                     </form>
                   </article>
                 </section>
@@ -252,3 +255,24 @@ foreach ($ud as $userd){
     
     
     ';
+
+foreach($cmd as $as){
+    echo '<section class="section" id="trainers">
+ <div class="container">
+            <div class="row" style="border-style: dotted;">   
+                        <div class="col-sm-6" >
+                        <h5>Stars</h5>
+                            <p>'.$as['rate'].' Stars</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <h5>Date Posted</h5>
+                            <p>May 03rd 2021</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <h5>Comment</h5>
+                            <p>'.$as['cmnt'].'</p>
+                        </div>
+                    </div>
+                   </div> 
+                 </section>';
+}

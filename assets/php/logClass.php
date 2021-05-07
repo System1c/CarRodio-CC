@@ -1,5 +1,5 @@
 <?php
-include_once 'Verify.php';
+include_once ('Verify.php');
 class logClass extends Verify
 {
     public $email;
@@ -17,16 +17,27 @@ class logClass extends Verify
         $numRows = $sDb->vDb();
         if ($numRows > 0) {
             $this->uLog();
-        } else {
+        }
+        else {
                 $anumRows = $sDb->avDb();
                 if($anumRows > 0){
                     $this->alog();
                 }
                 else{
-                    setcookie('err', 'Login information is incorrect!', time() + 7*24*60*60, '/');
-                    header("Location: ../../login.php");
-                    setcookie('emal', '', time() + 7*24*60*60, '/');
-                    setcookie('aemal', '', time() + 7*24*60*60, '/');
+                    $bnumRows = $sDb->bDb();
+                    if($bnumRows > 0){
+                        $id = $sDb->bId();
+                        foreach ($id as $a){
+                            $buID = $a['id'];
+                        }
+                        $this->blog($buID);
+                    }
+                    else {
+                        setcookie('err', 'Login information is incorrect!', time() + 7 * 24 * 60 * 60, '/');
+                        header("Location: ../../login.php");
+                        setcookie('emal', '', time() + 7 * 24 * 60 * 60, '/');
+                        setcookie('aemal', '', time() + 7 * 24 * 60 * 60, '/');
+                    }
                 }
         }
 
@@ -45,5 +56,13 @@ class logClass extends Verify
         setcookie('err', '', time() + 7*24*60*60, '/');
         setcookie('aemal', $this->email, time() + 7*24*60*60, '/');
         header("Location: ../../admin-dash/index.php");
+    }
+
+    function blog($bid){
+        $status1 = "true";
+        setcookie('err', '', time() + 7*24*60*60, '/');
+        setcookie('bemal', $this->email, time() + 7*24*60*60, '/');
+        setcookie('bid', $bid, time() + 7*24*60*60, '/');
+        header("Location: ../../buyer-dash/allad.php");
     }
 }

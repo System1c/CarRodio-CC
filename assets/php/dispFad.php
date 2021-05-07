@@ -32,7 +32,7 @@ if ($count < 3){
                             </p>
 
                             <ul class="social-icons">
-                                <li><a href="car-details.php">+ View Car</a></li>
+                                <li><a href="car-details.php?id=' . $data1['id'] . '">+ View Car</a></li>
                             </ul>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 <?php
-
+include_once('Dblog.php');
 class Verify extends Dblog
 {
 
@@ -14,10 +14,26 @@ class Verify extends Dblog
 
     function vDb()
     {
-        $sql = "SELECT * FROM users where email='$this->v1' AND passw = '$this->v2'";
+        $sql = "SELECT * FROM users where email='$this->v1' AND passw = '$this->v2' AND type='s'";
         $result = $this->conn()->query($sql);
         $numRows = $result->num_rows;
         return $numRows;
+    }
+
+    function bDb(){
+        $sql = "SELECT * FROM users where email='$this->v1' AND passw = '$this->v2' AND type='b'";
+        $result = $this->conn()->query($sql);
+        $numRows = $result->num_rows;
+        return $numRows;
+    }
+
+    function bId(){
+        $sql = "SELECT * FROM users where email='$this->v1'";
+        $result = $this->conn()->query($sql);
+        while ($row = $result->fetch_assoc()) {
+            $data1[] = $row;
+        }
+        return $data1;
     }
 
     function avDb()

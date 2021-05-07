@@ -1,6 +1,8 @@
 <?php
 include_once ('rejverAd.php');
 include_once ('Dblog.php');
+
+
 if (isset($_POST['verify']))
 {
     $id = $_POST['verify'];

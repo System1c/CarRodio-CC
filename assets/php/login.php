@@ -1,5 +1,5 @@
 <?php
-include_once('../../admin-dash/assets/php/Dblog.php');
+include_once('Dblog.php');
 include_once('logClass.php');
 include_once('Verify.php');
 session_start();
