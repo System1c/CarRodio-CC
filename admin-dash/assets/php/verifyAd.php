@@ -13,3 +13,4 @@ echo
 <button class="btn waves-effect waves-light btn-danger" name="reject" value="'.$row['id'].'"><i class="icofont icofont-eye-alt"></i>Reject</button></td>
 </tr>';
     }
+

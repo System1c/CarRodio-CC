@@ -6,12 +6,6 @@ include_once('Dblog.php');
 include_once ('queryImg.php');
 
 
-if (isset($_POST['wlist'])){
-    $count++;
-    $id = $_POST['wlist'];
-    setcookie($id, $id , time() + 7*24*60*60, '/');
-    $ad->saveWlist();
-}
 
 
 
@@ -50,4 +44,13 @@ foreach ($res as $data) {
                         </div>
                     </div>
                 </div>';
+}
+
+if (isset($_POST['wlist'])){
+    $count++;
+    $aid = $_POST['wlist'];
+    $bid = $_COOKIE['bid'];
+    $ad->saveWlist($aid,$bid);
+    echo '<script>alert("Successfully Wishlisted!")</script>';
+    header('Location: ../../cars.php');
 }

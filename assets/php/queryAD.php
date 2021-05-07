@@ -1,5 +1,6 @@
 <?php
-class queryAD{
+include_once ('Dblog.php');
+class queryAD extends Dblog {
 
      function queryfAd(){
          $qad = new refAd();
@@ -7,10 +8,9 @@ class queryAD{
             return $fad;
     }
 
-    function saveWlist(){
-         $sql = "INSERT into wlist(adid, uid) VALUES ($aid, $usid0)";
+    function saveWlist($aid, $bid){
+         $sql = "INSERT into wlist(adid, uid) VALUES ($aid, $bid)";
          $this->conn()->query($sql);
-
     }
 
 
