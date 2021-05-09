@@ -1,11 +1,9 @@
 <?php
-require "fpdf.php";
-
-
-
+include_once ('fpdf.php');
 
 class reports extends FPDF{
     function header(){
+
         $this->SetFont('Arial','B',14);
         $this->Cell(276,5,'Seller Details',0,0,'C');
         $this->Ln();
@@ -27,7 +25,7 @@ class reports extends FPDF{
     }
     function viewTable($db){
         $this->SetFont('Times','',12);
-        $stmt= $db->query('select * from users');
+        $stmt= $db->query ('select * from users');
         while ($data =$stmt->fetch(PDO::FETCH_OBJ)){
             $this->Cell(20,10,$data->id,1,0,'L');
             $this->Cell(40,10,$data->firstname,1,0,'L');
@@ -36,7 +34,7 @@ class reports extends FPDF{
             $this->Ln();
         }
     }
-    function genReport(){
+    function genreport(){
         $pdf =new reports();
         $pdf->AliasNbPages();
         $pdf ->AddPage('L','A4',0);
@@ -44,7 +42,6 @@ class reports extends FPDF{
         $pdf->viewTable(new PDO('mysql:host=localhost;dbname=carrodio','root',''));
         $pdf->Output();
     }
-
 }
 
 ?>
