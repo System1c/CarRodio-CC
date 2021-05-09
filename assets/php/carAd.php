@@ -20,7 +20,7 @@ foreach ($res as $data) {
         echo '<div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="'.$clink.'" alt="">
+                            <img src="'.$clink.'" alt="" class="imgsize">
                         </div>
                         <div class="down-content">
                             <span>

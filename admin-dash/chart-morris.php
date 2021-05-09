@@ -365,6 +365,7 @@ $user = "$c $d";
                                                                 <button class="btn waves-effect waves-light btn-success" name="highgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
                                                                 <p class="m-b-0"></p>
                                                             </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">

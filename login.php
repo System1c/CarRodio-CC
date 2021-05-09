@@ -111,6 +111,7 @@ if(!isset($_COOKIE['err'])){
 
 <html lang="en" >
 <head>
+
   <meta charset="UTF-8">
   <title>CarRodio - Login or Sign Up</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
@@ -135,13 +136,18 @@ if(!isset($_COOKIE['err'])){
 			<input type="email" placeholder="Email" name="remail" />
 			<input type="password" placeholder="Password" name="pswr" />
             <input type="password" placeholder="Re-enter Password" name="repswr" />
+
             <!--<select name="secq">
             <option value="maiden">Your Mothers Maiden Name</option>
             <option value="pet">First Pet's Name</option>
             </select>-->
 
             <input type="phrase" placeholder="Enter your Special Phrase" name="phrase" required/>
-
+            <label for="type">Are you a Buyer or Seller?</label>
+            <select name="type" id="type">
+                <option value="b">Buyer</option>
+                <option value="s">Seller</option>
+            </select>
             <button name="signup">Sign Up</button>
 		</form>
 	</div>

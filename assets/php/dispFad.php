@@ -16,7 +16,7 @@ if ($count < 3){
         echo '<div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="'. $clink .'" alt="">
+                            <img src="'. $clink .'" alt="" class="imgclass">
                         </div>
                         <div class="down-content">
                             <span>

@@ -5,9 +5,8 @@ $user= $c = $d = " ";
 $c = $_COOKIE['fname'];
 $d = $_COOKIE['lname'];
 $user = "$c $d";
-if (empty($_COOKIE['fname'])){
-    header("Refresh:0");
-}
+
+
 /*$title = $vcondition = $type=  $brand = $price  = $titleErr = $vconditionErr =$typeErr = $brandErr= $priceErr = "";
 
 $err = "false";
@@ -84,7 +83,7 @@ if (isset($_POST['submit']) && $err == "false") {
 <html lang="en">
 
 <head>
-    <title>Your Wishlist - Buyer</title>
+    <title>Your Messages - Seller</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -247,8 +246,8 @@ if (isset($_POST['submit']) && $err == "false") {
                                     </a>
                                 </li>
                                 <li class="waves-effect waves-light">
-                                    <a href="/carrodio-cc/index.php">
-                                        <i class="fa-home"></i> Home
+                                    <a href="auth-lock-screen.html">
+                                        <i class="ti-lock"></i> Lock Screen
                                     </a>
                                 </li>
                                 <li class="waves-effect waves-light">
@@ -295,7 +294,7 @@ if (isset($_POST['submit']) && $err == "false") {
                             </form>
                         </div>
                         <div class="pcoded-navigation-label">Navigation</div>
-                        <!--<ul class="pcoded-item pcoded-left-item">
+                        <ul class="pcoded-item pcoded-left-item">
                             <li class="">
                                 <a href="index.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
@@ -303,24 +302,34 @@ if (isset($_POST['submit']) && $err == "false") {
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
-                        </ul>-->
-
+                        </ul>
+                        <div class="pcoded-navigation-label">Advertisement</div>
                         <ul class="pcoded-item pcoded-left-item">
-                            <!--<li class="">
+                            <li class="">
                                 <a href="newad.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-star"></i><b>FC</b></span>
                                     <span class="pcoded-mtext">Add New Advertisement</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
-                            </li>-->
+                            </li>
                             <li class="">
                                 <a href="allad.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-search"></i><b>FC</b></span>
-                                    <span class="pcoded-mtext">Your Wishlist</span>
+                                    <span class="pcoded-mtext">Posted Advertisements</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                         </ul>
+                            <div class="pcoded-navigation-label">Messages</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a href="msgs.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-envelope"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Your Messages</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
                 </nav>
                 <div class="pcoded-content">
                     <!-- Page-header start -->
@@ -329,8 +338,8 @@ if (isset($_POST['submit']) && $err == "false") {
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <div class="page-header-title">
-                                        <h5 class="m-b-10">Your Wishlist</h5>
-                                        <p class="m-b-0">View all your Wishlisted Ads</p>
+                                        <h5 class="m-b-10">View your Messages</h5>
+                                        <p class="m-b-0">View all incoming messages</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -340,7 +349,7 @@ if (isset($_POST['submit']) && $err == "false") {
                                         </li>
                                         <li class="breadcrumb-item"><a href="#!">Dashboard</a>
                                         </li>
-                                        <li class="breadcrumb-item"><a href="#!">Your Wishlist</a>
+                                        <li class="breadcrumb-item"><a href="#!">Your Messages</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -360,27 +369,26 @@ if (isset($_POST['submit']) && $err == "false") {
                                         <div class="col-sm-12">
                                             <div class="card">
                                                 <div class="card-header">
-                                                    <h5>Enter Advertisement Details Below</h5>
+                                                    <h5>View All Your Message Details Below</h5>
                                                 </div>
                                                 <div class="card-block">
                                                     <form action="assets/php/adDetails.php" method="post">
-                                                            <div class="table-responsive">
-                                                                <table class="table">
-                                                                    <thead>
-                                                                    <tr>
-                                                                        <th>#</th>
-                                                                        <th>Ad Title</th>
-                                                                        <th>Ad Description</th>
-                                                                        <th>Delete Wishlisted</th>
-                                                                    </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                    <?php
-                                                                    include ('assets/php/adDetails.php');
-                                                                    ?>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Message ID</th>
+                                                                    <th>Message Sender</th>
+                                                                    <th>Message</th>
+                                                                    <th>Contact Sender</th>
+                                                                    <th>Delete Message</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </form>
                                                 </div>
                                             </div>

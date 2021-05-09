@@ -2,7 +2,14 @@
 
 
 <html lang="en">
-
+<style>
+    img{
+        float: left;
+        width:  400px;
+        height: 250px;
+        object-fit: cover;
+    }
+</style>
   <head>
 
     <meta charset="utf-8">

@@ -11,11 +11,11 @@ if(isset($_SERVER['REQUEST_METHOD'])=="POST"
     $remail = $_POST["remail"];
     $pswr = $_POST["repswr"];
     $phr = $_POST["phrase"];
+    $tp = $_POST['type'];
 
 
 
-
-    $lgres = new sigClass($fename, $lename, $remail, $pswr, $phr);
+    $lgres = new sigClass($fename, $lename, $remail, $pswr, $phr, $tp);
     $lgres->sigDb();
 
 /*

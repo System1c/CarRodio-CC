@@ -221,7 +221,7 @@ $cmd = $cm->queryCom();
                         <div class="col-sm-6">
                             <label>Email</label>
                             <p><a href="#">'.$emil.'</a></p>
-                            <a href="!#">Message This Seller</a>
+                            <a href="msgsel.php?id='.$adid.'&sid='.$sid.'">Message This Seller</a>
                         </div>
                         
                     </div>
@@ -229,7 +229,7 @@ $cmd = $cm->queryCom();
                     <h5>Rate this Seller!</h5>
                     <br>
                     <form method="post" action="rateB.php">
-                    <select name="rate" id="rate">
+                    <select name="rate" id="rate">  
                         <option value="1">1 Star</option>
                          <option value="2">2 Stars</option>
                          <option value="3">3 Stars</option>

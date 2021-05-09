@@ -12,6 +12,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
 
 
 
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -608,7 +609,10 @@ features
 .feature-item .left-icon img {
   float: left;
   margin-right: 30px;
+
 }
+
+
 
 .feature-item .right-content {
   display: inline;
