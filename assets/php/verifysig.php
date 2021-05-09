@@ -7,6 +7,7 @@ class verifysig extends Dblog
     private $v3;
     private $v4;
     private $v5;
+    private $tpwr;
 
     function __construct($fn, $ln, $emal, $paas, $ph)
     {
@@ -26,7 +27,8 @@ class verifysig extends Dblog
     }
 
     function signDb(){
-    $ssql = "INSERT INTO users (firstname, lastname, email, passw, phrase) VALUES ('$this->v1','$this->v2','$this->v3','$this->v4', '$this->v5')";
+        $this->tpwr = $tb = hash('sha256', $this->v4);
+    $ssql = "INSERT INTO users (firstname, lastname, email, passw, phrase) VALUES ('$this->v1','$this->v2','$this->v3','$this->tpwr', '$this->v5')";
     $this->conn()->query($ssql);
     setcookie('emal', $this->v3, time() + 7 * 24 * 60 * 60, '/');
     }

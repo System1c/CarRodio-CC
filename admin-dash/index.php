@@ -6,6 +6,9 @@ $user=  " ";
 $c = $_COOKIE['afname'];
 $d = $_COOKIE['alname'];
 $user = "$c $d";
+if (empty($_COOKIE['afname'])){
+    header("Refresh:0");
+}
 
 ?>
 

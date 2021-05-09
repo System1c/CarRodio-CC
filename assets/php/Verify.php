@@ -6,6 +6,7 @@ class Verify extends Dblog
     private $v1;
     private $v2;
 
+
     function __construct($emal, $paas)
     {
         $this->v1 = $emal;
@@ -14,14 +15,16 @@ class Verify extends Dblog
 
     function vDb()
     {
-        $sql = "SELECT * FROM users where email='$this->v1' AND passw = '$this->v2' AND type='s'";
+        $tb = hash('sha256', $this->v2);
+        $sql = "SELECT * FROM users where email='$this->v1' AND passw = '$tb' AND type='s'";
         $result = $this->conn()->query($sql);
         $numRows = $result->num_rows;
         return $numRows;
     }
 
     function bDb(){
-        $sql = "SELECT * FROM users where email='$this->v1' AND passw = '$this->v2' AND type='b'";
+        $tb = hash('sha256', $this->v2);
+        $sql = "SELECT * FROM users where email='$this->v1' AND passw = '$tb' AND type='b'";
         $result = $this->conn()->query($sql);
         $numRows = $result->num_rows;
         return $numRows;

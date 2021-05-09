@@ -13,6 +13,7 @@ class logClass extends Verify
 
     function checkdb()
     {
+
         $sDb = new Verify($this->email, $this->passw);
         $numRows = $sDb->vDb();
         if ($numRows > 0) {

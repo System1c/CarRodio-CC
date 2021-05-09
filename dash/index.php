@@ -7,7 +7,9 @@ $user=" ";
 $a = $_COOKIE['fname'];
 $b = $_COOKIE['lname'];
 $user = "$a $b";
-
+if (empty($_COOKIE['fname'])){
+    header("Refresh:0");
+}
 ?>
 <head>
     <title>Dashboard - Buyer</title>
@@ -400,7 +402,7 @@ $user = "$a $b";
                                                                 <i class="fas fa-star mat-icon f-24"></i>
                                                             </div>
                                                             <div class="col-9 cst-cont">
-                                                                <h5>4.21 Stars</h5>
+                                                                <h5>3.25 Stars</h5>
                                                                 <p class="m-b-0">Average Rating</p>
                                                             </div>
                                                         </div>

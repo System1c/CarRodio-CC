@@ -157,6 +157,7 @@ if(!isset($_COOKIE['err'])){
 			<input type="text" placeholder="Email" name="eml" required/>
 			<input type="password" placeholder="Password" name="psw" required/>
 			<a href="fogpw.php">Forgot your password?</a>
+            <a href="index.php">Go Back Home</a>
             <input type="submit" name="submit" value="Sign In">
 		</form>
 	</div>

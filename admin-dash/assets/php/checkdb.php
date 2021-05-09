@@ -16,8 +16,10 @@ class checkdb extends Dblog{
     }
 
     function modUser(){
+
+        $tb = hash('sha256', $this->pass1);
         echo $this->id1;
-        $sql = "UPDATE users SET firstname='$this->first1', lastname='$this->last1', email='$this->eml1', passw='$this->pass1' where id='$this->id1'";
+        $sql = "UPDATE users SET firstname='$this->first1', lastname='$this->last1', email='$this->eml1', passw='$tb' where id='$this->id1'";
         $this->conn()->query($sql);
     }
 

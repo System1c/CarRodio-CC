@@ -7,7 +7,9 @@ $user=" ";
 $a = $_COOKIE['fname'];
 $b = $_COOKIE['lname'];
 $user = "$a $b";
-
+if (empty($_COOKIE['fname'])){
+    header("Refresh:0");
+}
 ?>
 <head>
     <title>Dashboard - Buyer</title>
