@@ -336,7 +336,7 @@ $user = "$c $d";
                                                         <div class="card text-center order-visitor-card">
                                                             <div class="card-block">
                                                                 <h6 class="m-b-0">Seller Details</h6>
-                                                                <h4 class="m-t-15 m-b-15"><i ></i></h4>
+                                                                <h4 class="m-t-15 m-b-15 "><i ></i></h4>
                                                                 <button class="btn waves-effect waves-light btn-success" name="sellgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
                                                                 </tr>
                                                                 <p class="m-b-0"></p>
@@ -362,7 +362,7 @@ $user = "$c $d";
                                                             <div class="card-block">
                                                                 <h6 class="m-b-0">Highest Reached Ad</h6>
                                                                 <h4 class="m-t-15 m-b-15"><i ></i></h4>
-                                                                <button class="btn waves-effect waves-light btn-success" name="highgen" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                <button class="btn waves-effect waves-light btn-success" name="highgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
                                                                 <p class="m-b-0"></p>
                                                             </div>
                                                         </div>
@@ -370,9 +370,9 @@ $user = "$c $d";
                                                     <div class="col-md-6">
                                                         <div class="card text-center order-visitor-card">
                                                             <div class="card-block">
-                                                                <h6 class="m-b-0">Most Engaged Buyer</h6>
+                                                                <h6 class="m-b-0">Highest Rated Ads</h6>
                                                                 <h4 class="m-t-15 m-b-15"><i ></i></h4>
-                                                                <button class="btn waves-effect waves-light btn-success" name="enggen" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                <button class="btn waves-effect waves-light btn-success" name="hradsgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
                                                                 <p class="m-b-0"></p>
                                                             </div>
                                                         </div>

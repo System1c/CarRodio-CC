@@ -1,6 +1,9 @@
 <?php
 include_once ('reports.php');
 include_once ('regadreps.php');
+include_once ('highreads.php');
+include_once ('highrads.php');
+
 if (isset($_POST['sellgen']))
 {
 
@@ -17,17 +20,15 @@ if (isset($_POST['regadgen']))
 }
 if (isset($_POST['highgen']))
 {
-    $id = $_POST['highgen'];
-    $ver = new rejverAd($id);
-    $ver->verAd();
-    header("Location: ../../adstat.php");
+
+    $ver = new highreads;
+    $ver->genhighreads();
 }
-if (isset($_POST['enggen']))
+
+if (isset($_POST['hradsgen']))
 {
-    $id = $_POST['enggen'];
-    $ver = new rejverAd($id);
-    $ver->verAd();
-    header("Location: ../../adstat.php");
+    $ver = new highrads;
+    $ver->genhighrads();
 }
 
 
