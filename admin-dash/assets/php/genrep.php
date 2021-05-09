@@ -1,5 +1,6 @@
 <?php
 include_once ('reports.php');
+include_once ('regadreps.php');
 if (isset($_POST['sellgen']))
 {
 
@@ -9,10 +10,10 @@ if (isset($_POST['sellgen']))
 }
 if (isset($_POST['regadgen']))
 {
-    $id = $_POST['regadgen'];
-    $ver = new rejverAd($id);
-    $ver->verAd();
-    header("Location: ../../adstat.php");
+
+    $ver = new regadreps;
+    $ver->genregadreport();
+
 }
 if (isset($_POST['highgen']))
 {

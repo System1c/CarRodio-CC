@@ -348,7 +348,7 @@ $user = "$c $d";
                                                             <div class="card-block">
                                                                 <h6 class="m-b-0">Registered Ad details</h6>
                                                                 <h4 class="m-t-15 m-b-15"><i ></i></h4>
-                                                                <button class="btn waves-effect waves-light btn-success" name="regadgen" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                <button class="btn waves-effect waves-light btn-success" name="regadgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
                                                                 <p class="m-b-0"></p>
                                                             </div>
                                                         </div>

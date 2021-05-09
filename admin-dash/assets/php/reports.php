@@ -1,5 +1,5 @@
 <?php
-require "fpdf.php";
+include_once ('fpdf.php');
 
 class reports extends FPDF{
     function header(){
