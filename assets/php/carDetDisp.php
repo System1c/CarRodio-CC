@@ -30,6 +30,10 @@ foreach ($ud as $userd){
 $cm = new queryC($adid);
 $cmd = $cm->queryCom();
 
+$im = $ad->carimgQuery();
+foreach($im as $data){
+    $img = $data['link'];
+}
 
     echo '
     <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
@@ -61,14 +65,14 @@ $cmd = $cm->queryCom();
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block w-100" src="assets/images/car-image-1-1200x600.jpg" alt="First slide">
+                  <img class="d-block w-100" src="imgstore/'.$img.'" alt="First slide">
                 </div>
-                <div class="carousel-item">
+                <!--<div class="carousel-item">
                   <img class="d-block w-100" src="assets/images/car-image-1-1200x600.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
                   <img class="d-block w-100" src="assets/images/car-image-1-1200x600.jpg" alt="Third slide">
-                </div>
+                </div>-->
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

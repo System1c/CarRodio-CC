@@ -22,4 +22,13 @@ class carDetQ extends Dblog{
         $this->conn()->query($click);
     }
 
+    function carimgQuery(){
+        $sql = "SELECT link from img WHERE imgid='$this->id'";
+        $result = $this->conn()->query($sql);
+        while ($row = $result->fetch_assoc()) {
+            $bdata[] = $row;
+        }
+        return $bdata;
+    }
+
 }
