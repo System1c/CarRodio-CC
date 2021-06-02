@@ -41,7 +41,8 @@ class Verify extends Dblog
 
     function avDb()
     {
-        $asql = "SELECT * FROM admin where email='$this->v1' AND passw = '$this->v2'";
+        $tb = hash('sha256', $this->v2);
+        $asql = "SELECT * FROM admin where email='$this->v1' AND passw = '$tb'";
         $aresult = $this->conn()->query($asql);
         $anumRows = $aresult->num_rows;
         return $anumRows;

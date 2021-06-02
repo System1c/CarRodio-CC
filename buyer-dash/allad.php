@@ -248,7 +248,7 @@ if (isset($_POST['submit']) && $err == "false") {
                                 </li>
                                 <li class="waves-effect waves-light">
                                     <a href="/carrodio-cc/index.php">
-                                        <i class="fa-home"></i> Home
+                                        <i class="ti-home"></i> Home
                                     </a>
                                 </li>
                                 <li class="waves-effect waves-light">

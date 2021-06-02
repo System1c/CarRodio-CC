@@ -25,7 +25,8 @@ class verifyregad extends Dblog
     }
 
     function signDb(){
-        $ssql = "INSERT INTO admin (firstname, lastname, email, passw) VALUES ('$this->v1','$this->v2','$this->v3','$this->v4')";
+        $encpw = hash('sha256', $this->v4);
+        $ssql = "INSERT INTO admin (firstname, lastname, email, passw) VALUES ('$this->v1','$this->v2','$this->v3','$encpw')";
         $this->conn()->query($ssql);
     }
 

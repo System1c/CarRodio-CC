@@ -2,8 +2,8 @@
 <?php
 include  ('assets/php/acinfo.php');
 $user= $c = $d = " ";
-$c = $_COOKIE['fname'];
-$d = $_COOKIE['lname'];
+$c = $_COOKIE['bfname'];
+$d = $_COOKIE['blname'];
 $user = "$c $d";
 
 

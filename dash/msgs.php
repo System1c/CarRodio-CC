@@ -2,83 +2,9 @@
 <?php
 include  ('assets/php/acinfo.php');
 $user= $c = $d = " ";
-$c = $_COOKIE['fname'];
-$d = $_COOKIE['lname'];
+$c = $_COOKIE['bfname'];
+$d = $_COOKIE['blname'];
 $user = "$c $d";
-
-
-/*$title = $vcondition = $type=  $brand = $price  = $titleErr = $vconditionErr =$typeErr = $brandErr= $priceErr = "";
-
-$err = "false";
-unset($titleErr);
-unset($vconditionErr);
-unset($typeErr);
-unset($brandErr2);
-unset($priceErr);
-
-
-if (isset($_POST['submit']) && $err == "false") {
-
-    if (empty($_POST["adtitle"])) {
-        $titleErr = "Please Enter Title";
-        $err = "true";
-        echo $titleErr;
-        echo "<br>";
-    } else {
-        $title = $_POST["adtitle"];
-    }
-
-    if (empty($_POST["advcondition"])) {
-        $vconditionErr = "Please Enter Vehicle Condition";
-        $err = "true";
-        echo $vconditionErr;
-        echo "<br>";
-
-    } else {
-        $vcondition = $_POST["advcondition"];
-    }
-
-    if (empty($_POST["adtype"])) {
-        $typeErr = "Please Enter Vehicle Type";
-        $err = "true";
-        echo $typeErr;
-        echo "<br>";
-
-    } else {
-
-        $typeErr = $_POST["adtype"];
-    }
-
-    if (empty($_POST["adbrand"])) {
-        $brandErr2 = "Please Enter Vehicle Brand";
-        $err = "true";
-        echo $brandErr2;
-        echo "<br>";
-    } else {
-        $typeErr = $_POST["adbrand"];
-    }
-
-    if (empty($_POST["adprice"])) {
-        $priceErr = "Please Enter Price of Vehicle";
-        $err = "true";
-        echo $priceErr;
-        echo "<br>";
-    } else {
-        $priceErr = $_POST["adprice"];
-    }
-
-
-
-
-
-}*/
-
-
-
-
-
-
-
 ?>
 <html lang="en">
 
@@ -381,11 +307,13 @@ if (isset($_POST['submit']) && $err == "false") {
                                                                     <th>Message Sender</th>
                                                                     <th>Message</th>
                                                                     <th>Contact Sender</th>
-                                                                    <th>Delete Message</th>
+                                                                    <th>Advertisement ID</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-
+                                                                <?php
+                                                                include ('assets/php/msgdets.php');
+                                                                ?>
                                                                 </tbody>
                                                             </table>
                                                         </div>

@@ -17,12 +17,12 @@ class querySeller extends Dblog
         $res = mysqli_fetch_array($result);
         $first = $res['firstname'];
         $last = $res['lastname'];
-        if (!isset($_COOKIE['fname'])) {
-            setcookie('fname', $first, time() + 7 * 24 * 60 * 60, '/');
-            setcookie('lname', $last, time() + 7 * 24 * 60 * 60, '/');
+        if (!isset($_COOKIE['bfname'])) {
+            setcookie('bfname', $first, time() + 7 * 24 * 60 * 60, '/');
+            setcookie('blname', $last, time() + 7 * 24 * 60 * 60, '/');
         } else {
-            setcookie('fname', $first, time() + 7 * 24 * 60 * 60, '/');
-            setcookie('lname', $last, time() + 7 * 24 * 60 * 60, '/');
+            setcookie('bfname', $first, time() + 7 * 24 * 60 * 60, '/');
+            setcookie('blname', $last, time() + 7 * 24 * 60 * 60, '/');
         }
     }
 

@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <?php
+if(isset($_COOKIE['bfname'])){
+    header('Location: dash/index.php');
+}
+elseif (isset($_COOKIE['fname'])){
+    header('Location: buyer-dash/allad.php');
+}
+elseif(isset($_COOKIE['afname'])){
+    header('Location: admin-dash/index.php');
+}
 
 
 $fename = $lename = $pswr=  $remail = $emailErr  = $passErr = $passErr2 = $status = $fenameErr = $lenameErr=  $ps1 = $ps2 = "";
@@ -39,8 +48,16 @@ unset($passErr);
             echo "<br>";
 
         } else {
+            if (!filter_var($_POST["remail"], FILTER_VALIDATE_EMAIL) === false) {
+                $emailErr = "Please enter a valid Email";
+                $err = "true";
+                echo $emailErr;
+                echo "<br>";
 
-            $remail = $_POST["remail"];
+            } else {
+                $remail = $_POST["remail"];
+            }
+
         }
 
         if (empty($_POST["pswr"])) {

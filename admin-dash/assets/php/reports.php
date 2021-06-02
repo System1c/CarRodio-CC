@@ -27,6 +27,7 @@ class reports extends FPDF{
         $this->SetFont('Times','',12);
         $stmt= $db->query ('select * from users');
         while ($data =$stmt->fetch(PDO::FETCH_OBJ)){
+            $this->Image('logo.jpeg',10,6,30);
             $this->Cell(20,10,$data->id,1,0,'L');
             $this->Cell(40,10,$data->firstname,1,0,'L');
             $this->Cell(40,10,$data->lastname,1,0,'L');

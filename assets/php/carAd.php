@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 include_once('queryAD.php');
 include_once('refAd.php');
 include_once('Dblog.php');
@@ -47,10 +47,23 @@ foreach ($res as $data) {
 }
 
 if (isset($_POST['wlist'])){
-    $count++;
-    $aid = $_POST['wlist'];
-    $bid = $_COOKIE['bid'];
-    $ad->saveWlist($aid,$bid);
-    echo '<script>alert("Successfully Wishlisted!")</script>';
-    header('Location: ../../cars.php');
+    if (isset($_COOKIE['fname'])){
+        $count++;
+        $aid = $_POST['wlist'];
+        $bid = $_COOKIE['bid'];
+        $ad->saveWlist($aid,$bid);
+        echo '<script>alert("Successfully Wishlisted!")</script>';
+        header('Location: ../../cars.php');
+    }
+    elseif (isset($_COOKIE['bfname'])){
+        echo '<script>alert("Please sign in as a Buyer!")</script>';
+        header('Location: ../../login.php');
+
+    }
+    else{
+        echo '<script>alert("Please sign in to wishlist cars!")</script>';
+        header('Location: ../../login.php');
+    }
+
 }
+?>
