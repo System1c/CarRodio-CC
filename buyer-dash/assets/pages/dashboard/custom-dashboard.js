@@ -210,7 +210,7 @@ $(document).ready(function() {
                 "bullet": "round",
                 "bulletSize": 8,
                 // "fillAlphas": 0.1,
-                "lineColor": "#ed563b",
+                "lineColor": "#448aff",
                 "lineThickness": 2,
                 "negativeLineColor": "#ff5252",
                 "type": "smoothedLine",
@@ -426,7 +426,7 @@ function floatchart() {
                 [75, 10],
                 [90, 18],
             ],
-            color: "#ed563b",
+            color: "#448aff",
             lines: {
                 show: true,
                 fill: false,
