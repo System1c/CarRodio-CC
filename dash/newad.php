@@ -318,6 +318,17 @@ if (isset($_POST['submit']) && $err == "false") {
                                     </a>
                                 </li>
                             </ul>
+
+                            <div class="pcoded-navigation-label">Messages</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a href="msgs.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon"><i class="ti-envelope"></i><b>FC</b></span>
+                                        <span class="pcoded-mtext">Your Messages</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
                     </nav>
                     <div class="pcoded-content">
                         <!-- Page-header start -->

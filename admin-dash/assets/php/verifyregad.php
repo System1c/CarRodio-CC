@@ -29,7 +29,4 @@ class verifyregad extends Dblog
         $ssql = "INSERT INTO admin (firstname, lastname, email, passw) VALUES ('$this->v1','$this->v2','$this->v3','$encpw')";
         $this->conn()->query($ssql);
     }
-
-
-
 }

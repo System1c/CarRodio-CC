@@ -354,22 +354,6 @@ $user = "$c $d";
                                                         <tbody>
                                                         <?php
                                                         include ('assets/php/verifyAd.php');
-
-                                                        /*$loopResult = ''; // leave blank to start var for loop
-                                                        $result = 'SELECT id, title, sellerid FROM advert WHERE status="p"';
-                                                        $rslog = mysqli_query($link, $result);
-                                                        while($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
-                                                            $loopResult = '
- 	                                                            <tr>
-                                                                 <th scope="row">'.$row['id'].'</th>
-                                                                   <td>'.$row['sellerid'].'</td>
-                                                                  <td>'.$row['title'].'</td>
-                                                                  <td><button class="btn waves-effect waves-light btn-success" name="verify" value="'.$row['id'].'"><i class="icofont icofont-check-circled" ></i>Verify</button>
-                                                                 <button class="btn waves-effect waves-light btn-danger" name="reject" value="'.$row['id'].'"><i class="icofont icofont-eye-alt"></i>Reject</button></td>
-                                                                 </tr>
-                                                                ';
-                                                            echo $loopResult;
-                                                        }*/
                                                         ?>
                                                         </tbody>
                                                     </table>

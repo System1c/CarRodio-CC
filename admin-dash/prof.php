@@ -121,9 +121,7 @@ $user = "$c $d";
                             </div>
                         </div>
                     </div>
-                    <a href="index.php">
-                        <img class="img-fluid" src="" alt="Logo" />
-                    </a>
+                    
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
                     </a>
@@ -374,27 +372,6 @@ $user = "$c $d";
                                                                 <input type="text" class="form-control" placeholder="Re-enter Password" name="link" required>
                                                             </div>
                                                         </div>
-
-                                                        <!-- <div class="form-group row">
-                                                             <label class="col-sm-2 col-form-label">Select Condition of the Vehicle</label>
-                                                             <div class="col-sm-10">
-                                                                 <select name="cond" class="form-control">
-                                                                     <option value="Used">Used</option>
-                                                                     <option value="New">New</option>
-                                                                 </select>
-                                                             </div>
-                                                         </div>
-                                                         <div class="form-group row">
-                                                             <label class="col-sm-2 col-form-label">Select Type of Vehicle</label>
-                                                             <div class="col-sm-10">
-                                                                 <select name="ctype" class="form-control">
-                                                                     <option value="Car">Car</option>
-                                                                     <option value="Sedan">Sedan</option>
-                                                                     <option value="SUV">SUV</option>
-                                                                     <option value="Pickup">Pickup</option>
-                                                                 </select>
-                                                             </div>
-                                                         </div>-->
                                                         <button  type="submit" class="btn btn-success waves-effect waves-light " name="submit" ><i class="icofont icofont-check-circled"></i>Change Your Details</button>
                                                     </form>
                                                 </div>

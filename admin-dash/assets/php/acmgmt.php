@@ -63,18 +63,6 @@ if (isset($_POST['subch'])) {
 }
 
 
-/*
-
-if ($err == "false") {
-    $err == "false";
-    include ("assets/php/signup.php");
-    if ($status == "true"){
-        $emailErr = "This Email is already in use";
-        $status = "false";
-        echo $emailErr;
-    }
-
-}*/
 
 
 if(isset($_POST['schus'])) {

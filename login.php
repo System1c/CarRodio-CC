@@ -171,11 +171,6 @@ if(!isset($_COOKIE['err'])){
 	<div class="form-container sign-in-container">
 		<form action="assets/php/login.php" method="post">
 			<h1>Sign in</h1>
-			<!--<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>-->
 			<span>to use your account</span>
 			<input type="text" placeholder="Email" name="eml" required/>
 			<input type="password" placeholder="Password" name="psw" required/>

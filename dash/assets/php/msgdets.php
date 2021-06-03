@@ -21,3 +21,4 @@ foreach ($res as $data){
            <td>'.$data['adid'].'</td>
           </tr>';
 }
+

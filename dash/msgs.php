@@ -118,9 +118,7 @@ $user = "$c $d";
                             </div>
                         </div>
                     </div>
-                    <a href="index.php">
-                        <img class="img-fluid" src="" alt="Logo" />
-                    </a>
+                    
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
                     </a>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-
+error_reporting(0);
+ini_set('display_errors', 0);
 include  ('assets/php/acinfo.php');
 $user=" ";
 $a = $_COOKIE['bfname'];
@@ -118,9 +119,7 @@ if (empty($_COOKIE['bfname'])){
                                 </div>
                             </div>
                         </div>
-                      <!--  <a href="index.html">
-                            <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
-                        </a>-->
+
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
                         </a>

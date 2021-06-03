@@ -198,9 +198,7 @@ if (isset($_POST['submit']) && $err == "false") {
                             </div>
                         </div>
                     </div>
-                    <a href="index.php">
-                        <img class="img-fluid" src="" alt="Logo" />
-                    </a>
+                    
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
                     </a>
@@ -321,6 +319,16 @@ if (isset($_POST['submit']) && $err == "false") {
                                 <a href="allad.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-search"></i><b>FC</b></span>
                                     <span class="pcoded-mtext">Posted Advertisements</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pcoded-navigation-label">Messages</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="">
+                                <a href="msgs.php" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-envelope"></i><b>FC</b></span>
+                                    <span class="pcoded-mtext">Your Messages</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>

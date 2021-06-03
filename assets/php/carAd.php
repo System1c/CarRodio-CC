@@ -4,12 +4,6 @@ include_once('queryAD.php');
 include_once('refAd.php');
 include_once('Dblog.php');
 include_once ('queryImg.php');
-
-
-
-
-
-
 $ad = new queryAD();
 $res = $ad->queryfAd();
 $count =0;

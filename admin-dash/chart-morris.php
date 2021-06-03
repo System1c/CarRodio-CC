@@ -120,9 +120,7 @@ $user = "$c $d";
                                 </div>
                             </div>
                         </div>
-                        <a href="index.php">
-                            <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
-                        </a>
+
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
                         </a>
@@ -332,7 +330,8 @@ $user = "$c $d";
                                             <form method="post" action="assets/php/genrep.php">
                                             <div class="col-xl-12 col-md-12">
                                                 <div class="row">
-                                                    <div class="col-md-6">
+
+                                                    <div class="col-md-12">
                                                         <div class="card text-center order-visitor-card">
                                                             <div class="card-block">
                                                                 <h6 class="m-b-0">Seller Details</h6>
@@ -343,7 +342,7 @@ $user = "$c $d";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="card text-center order-visitor-card">
                                                             <div class="card-block">
                                                                 <h6 class="m-b-0">Registered Ad details</h6>
@@ -353,33 +352,36 @@ $user = "$c $d";
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-12 col-md-12">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="card text-center order-visitor-card">
-                                                            <div class="card-block">
-                                                                <h6 class="m-b-0">Highest Reached Ad</h6>
-                                                                <h4 class="m-t-15 m-b-15"><i ></i></h4>
-                                                                <button class="btn waves-effect waves-light btn-success" name="highgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
-                                                                <p class="m-b-0"></p>
+                                                    <div class="col-xl-12 col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="card text-center order-visitor-card">
+                                                                    <div class="card-block">
+                                                                        <h6 class="m-b-0">Highest Reached Ad</h6>
+                                                                        <h4 class="m-t-15 m-b-15"><i ></i></h4>
+                                                                        <button class="btn waves-effect waves-light btn-success" name="highgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                        <p class="m-b-0"></p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="card text-center order-visitor-card">
+                                                                <div class="card-block">
+                                                                    <h6 class="m-b-0">Highest Rated Ads</h6>
+                                                                    <h4 class="m-t-15 m-b-15"><i ></i></h4>
+                                                                    <button class="btn waves-effect waves-light btn-success" name="hradsgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
+                                                                    <p class="m-b-0"></p>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card text-center order-visitor-card">
-                                                            <div class="card-block">
-                                                                <h6 class="m-b-0">Highest Rated Ads</h6>
-                                                                <h4 class="m-t-15 m-b-15"><i ></i></h4>
-                                                                <button class="btn waves-effect waves-light btn-success" name="hradsgen" value=""><i class="icofont icofont-check-circled" ></i>Generate</button>
-                                                                <p class="m-b-0"></p>
-                                                            </div>
+                                                        </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                </div>
                                             </div>
+
                                             </form>
                                             <!-- Donut chart Ends -->
                                         </div>

@@ -128,9 +128,7 @@ if(isset($_POST['schus'])) {
                             </div>
                         </div>
                     </div>
-                    <a href="index.php">
-                        <img class="img-fluid" src="" alt="Logo" />
-                    </a>
+
                     <a class="mobile-options waves-effect waves-light">
                         <i class="ti-more"></i>
                     </a>
@@ -445,23 +443,7 @@ if(isset($_POST['schus'])) {
                                                                 if(isset($_POST['schus'])) {
                                                                     include  ('assets/php/advertreq.php');
                                                                 }
-
-                                                                /*                                                                $loopResult = ''; // leave blank to start var for loop
-                                                                                                                                $inte = 1;
-                                                                                                                                $result = 'SELECT id, title FROM advert WHERE status="p"';
-                                                                                                                                $rslog = mysqli_query($link, $result);
-                                                                                                                                while($row = mysqli_fetch_array($rslog, MYSQLI_ASSOC)) {
-                                                                                                                                    $loopResult = '
-                                                                                                                                 <tr>
-                                                                                                                                 <th scope="row">'.$inte.'</th>
-                                                                                                                                  <td>'.$row['title'].'</td>
-                                                                                                                                  <td><button class="btn waves-effect waves-light btn-danger" name="reject" value="'.$row['id'].'"><i class="icofont icofont-eye-alt"></i>Delete</button></td>
-                                                                                                                                 </tr>
-                                                                                                                                ';
-                                                                                                                                    $inte++;
-                                                                                                                                    echo $loopResult;
-                                                                                                                                }
-                                                                                                                                */?>
+                                                                ?>
                                                                 </tbody>
                                                             </table>
                                                         </div>
