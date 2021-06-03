@@ -142,22 +142,12 @@ if(!isset($_COOKIE['err'])){
 	<div class="form-container sign-up-container">
 		<form action="login.php" method="post">
 			<h1>Create Account</h1>
-			<!--<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>-->
 			<span>Use your email for registration</span>
 			<input type="text" placeholder="First Name" name="fname" />
             <input type="text" placeholder="Last Name" name="lname" />
 			<input type="email" placeholder="Email" name="remail" />
 			<input type="password" placeholder="Password" name="pswr" />
             <input type="password" placeholder="Re-enter Password" name="repswr" />
-
-            <!--<select name="secq">
-            <option value="maiden">Your Mothers Maiden Name</option>
-            <option value="pet">First Pet's Name</option>
-            </select>-->
 
             <input type="phrase" placeholder="Enter your Special Phrase" name="phrase" required/>
             <label for="type">Are you a Buyer or Seller?</label>
