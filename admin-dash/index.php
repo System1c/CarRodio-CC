@@ -204,7 +204,7 @@ if (empty($_COOKIE['afname'])){
                                     </li>
                                     <li class="waves-effect waves-light">
                                         <a href="../index.php">
-                                            <i class="ti-home"></i> Go back Home
+                                            <i class="ti-home"></i> Home
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
