@@ -232,7 +232,7 @@ foreach($im as $data){
                     
                     <h5>Rate this Seller!</h5>
                     <br>
-                    <form method="post" action="assets/php/rateB.php">
+                    <form method="post" action="rateB.php">
                     <select name="rate" id="rate">  
                         <option value="1">1 Star</option>
                          <option value="2">2 Stars</option>
